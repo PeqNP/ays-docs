@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>At Your Service Help Library</title>
+    <link>http://localhost:1313/help/</link>
+    <description>Recent content on At Your Service Help Library</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Jan 2022 16:30:02 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome</title>
+      <link>http://localhost:1313/help/about/</link>
+      <pubDate>Mon, 24 Jan 2022 16:30:11 -0800</pubDate>
+      
+      <guid>http://localhost:1313/help/about/</guid>
+      <description>Help Library These documents are designed to help you use the @ys (At Your Service) mobile application.
+ How do I find my Slack Team and Channel?  </description>
+    </item>
+    
+    <item>
+      <title>Slack Team and Channel</title>
+      <link>http://localhost:1313/help/library/slack-team-and-channel/</link>
+      <pubDate>Mon, 24 Jan 2022 16:30:02 -0800</pubDate>
+      
+      <guid>http://localhost:1313/help/library/slack-team-and-channel/</guid>
+      <description>Finding your Slack Team and Channel ID </description>
+    </item>
+    
+  </channel>
+</rss>

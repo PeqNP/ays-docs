@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libraries on At Your Service Help Library</title>
+    <link>http://localhost:1313/help/library/</link>
+    <description>Recent content in Libraries on At Your Service Help Library</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Jan 2022 16:30:02 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slack Team and Channel</title>
+      <link>http://localhost:1313/help/library/slack-team-and-channel/</link>
+      <pubDate>Mon, 24 Jan 2022 16:30:02 -0800</pubDate>
+      
+      <guid>http://localhost:1313/help/library/slack-team-and-channel/</guid>
+      <description>Finding your Slack Team and Channel ID </description>
+    </item>
+    
+  </channel>
+</rss>
