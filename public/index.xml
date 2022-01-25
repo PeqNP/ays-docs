@@ -23,7 +23,8 @@
       <pubDate>Mon, 24 Jan 2022 16:30:02 -0800</pubDate>
       
       <guid>http://localhost:1313/help/library/slack-team-and-channel/</guid>
-      <description>Finding your Slack Team and Channel ID </description>
+      <description>Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
+ Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e.</description>
     </item>
     
   </channel>

@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Finding your Slack Team and Channel ID " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
+ Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -40,19 +41,22 @@
 
 
 <meta property="og:title" content="Slack Team and Channel" />
-<meta property="og:description" content="Finding your Slack Team and Channel ID " />
+<meta property="og:description" content="Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
+ Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/help/library/slack-team-and-channel/" /><meta property="article:section" content="library" />
 <meta property="article:published_time" content="2022-01-24T16:30:02-08:00" />
 <meta property="article:modified_time" content="2022-01-24T16:30:02-08:00" />
 
 <meta itemprop="name" content="Slack Team and Channel">
-<meta itemprop="description" content="Finding your Slack Team and Channel ID "><meta itemprop="datePublished" content="2022-01-24T16:30:02-08:00" />
+<meta itemprop="description" content="Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
+ Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e."><meta itemprop="datePublished" content="2022-01-24T16:30:02-08:00" />
 <meta itemprop="dateModified" content="2022-01-24T16:30:02-08:00" />
-<meta itemprop="wordCount" content="7">
+<meta itemprop="wordCount" content="109">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Slack Team and Channel"/>
-<meta name="twitter:description" content="Finding your Slack Team and Channel ID "/>
+<meta name="twitter:description" content="Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
+ Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -117,6 +121,14 @@
           <article class="post">
   <div class="post-content">
     <h1 id="finding-your-slack-team-and-channel-id">Finding your Slack Team and Channel ID</h1>
+<p>To open Slack channels in the <strong>@ys</strong> application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.</p>
+<ul>
+<li>Download and install the <a href="https://sdt.builtbyslack.com">Slack Developer Tools</a></li>
+<li>Within the Slack channel you wish to get the ID for (e.g. #general) type <code>/sdt whoami</code></li>
+</ul>
+<p>The tool will produce something like the following:</p>
+<p><img src="./sdt-output.png" alt="SDT output"></p>
+<p>Now go back to <strong>@ys</strong> and place the Workspace ID <code>T04...</code> value in the <code>Team</code> field, and the <code>Current Conversation ID</code> value <code>C01...</code> into the <code>Channel</code> field.</p>
 
   </div>
 </article>
