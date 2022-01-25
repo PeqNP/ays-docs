@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "http://localhost:1313/help"
 languageCode = "en"
 defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "At Your Service Help Library"
@@ -32,7 +32,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   name = "Home"
   weight = 10
   identifier = "home"
-  url = "/index"
+  url = "/about"
 [[menu.main]]
   name = "Library"
   weight = 20
