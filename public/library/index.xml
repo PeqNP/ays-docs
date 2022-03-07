@@ -6,7 +6,18 @@
     <description>Recent content in Libraries on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Mar 2022 05:21:09 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 13:07:21 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Invalid Call Parameters</title>
+      <link>http://localhost:1313/help/library/invalid-call-parameters/</link>
+      <pubDate>Mon, 07 Mar 2022 13:07:21 -0800</pubDate>
+      
+      <guid>http://localhost:1313/help/library/invalid-call-parameters/</guid>
+      <description>Invalid Call Parameters This error occurs when one or more sensor parameters are not configured. Depending on the sensor parameter, it either needs to be a string with one or more characters or a numeric value for integer and double types.
+Please configure the measurement sensor parameters with a value.
+Below is an example of a string sensor parameter that is not configured. In this context, simply add a value with one or more characters.</description>
+    </item>
+    
     <item>
       <title>Read-only Threshold</title>
       <link>http://localhost:1313/help/library/read-only-threshold/</link>
