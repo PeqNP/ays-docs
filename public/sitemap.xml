@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/help/about/</loc>
-    <lastmod>2022-01-24T16:30:11-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2022-01-24T16:30:02-08:00</lastmod>
+    <lastmod>2022-03-07T05:21:09-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
-    <lastmod>2022-01-24T16:30:02-08:00</lastmod>
+    <lastmod>2022-03-07T05:21:09-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/help/library/slack-team-and-channel/</loc>
-    <lastmod>2022-01-24T16:30:02-08:00</lastmod>
+    <loc>http://localhost:1313/help/library/read-only-threshold/</loc>
+    <lastmod>2022-03-07T05:21:09-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/about/</loc>
+    <lastmod>2022-01-24T16:30:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

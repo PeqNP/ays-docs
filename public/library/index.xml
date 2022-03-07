@@ -6,15 +6,16 @@
     <description>Recent content in Libraries on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Jan 2022 16:30:02 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 05:21:09 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Slack Team and Channel</title>
-      <link>http://localhost:1313/help/library/slack-team-and-channel/</link>
-      <pubDate>Mon, 24 Jan 2022 16:30:02 -0800</pubDate>
+      <title>Read-only Threshold</title>
+      <link>http://localhost:1313/help/library/read-only-threshold/</link>
+      <pubDate>Mon, 07 Mar 2022 05:21:09 -0800</pubDate>
       
-      <guid>http://localhost:1313/help/library/slack-team-and-channel/</guid>
-      <description>Finding your Slack Team and Channel ID To open Slack channels in the @ys application you must provide a Slack Team and Channel ID. This information is not readily provided within Slack. To get this information you will need to download the Slack developer tools to query your Slack workspace information.
- Download and install the Slack Developer Tools Within the Slack channel you wish to get the ID for (e.</description>
+      <guid>http://localhost:1313/help/library/read-only-threshold/</guid>
+      <description>Read-only Threshold When a Threshold is set as &amp;ldquo;read-only&amp;rdquo;, all other nodes that template from this measurement will be unable to change the configuration values of threshold actions.
+Imagine you have a group of services which must send all alerting traffic to a specific Slack channel. You would turn on &amp;ldquo;read-only&amp;rdquo; in this context. In essence, this creates a central configuration point for your alerting configuration.
+If you are creating a measurement template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team.</description>
     </item>
     
   </channel>
