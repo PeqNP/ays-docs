@@ -8,4 +8,4 @@ draft: false
 
 These documents are designed to help you use the **@ys** (At Your Service) mobile application.
 
-- [How do I find my Slack Team and Channel?]({{< relref "library/slack-team-and-channel.md" >}})
+- [What is a read-only threshold?]({{< relref "library/read-only-threshold.md" >}})
