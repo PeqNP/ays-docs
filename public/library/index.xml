@@ -6,7 +6,18 @@
     <description>Recent content in Libraries on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Mar 2022 13:07:21 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Mar 2022 22:06:59 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtual Nodes</title>
+      <link>http://localhost:1313/help/library/virtual-nodes/</link>
+      <pubDate>Sun, 13 Mar 2022 22:06:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/virtual-nodes/</guid>
+      <description>Virtual Nodes Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.
+Virtual modes can be considered as ephemeral, although their life span depends on the context.
+The typical use case for virtual nodes is that you wish to quickly assign the same measurements to many nodes. In other words, they represent an asset or service that share the same properties.</description>
+    </item>
+    
     <item>
       <title>Invalid Call Parameters</title>
       <link>http://localhost:1313/help/library/invalid-call-parameters/</link>
