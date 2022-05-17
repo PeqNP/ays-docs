@@ -6,24 +6,46 @@
     <description>Recent content on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 May 2022 06:54:27 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 May 2022 09:45:02 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What Is Node Alerting Configiguration?</title>
+      <title>What Is a Node Relationship?</title>
+      <link>http://localhost:1313/help/library/what-is-a-node-relationship/</link>
+      <pubDate>Tue, 17 May 2022 09:45:02 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/what-is-a-node-relationship/</guid>
+      <description>Node Relationships Nodes relationshiops are logically grouped by children, dependents, and their dependencies.
+Parent / child relationships are a typical Tree data structure.
+Dependecies and dependents allow a node to define which services, assets, etc. it depends on. Imagine you are building a retail app that sells shoes. Your app may depend on a &amp;ldquo;Product&amp;rdquo; service, which gives you SKU level detail about your shoes, and a &amp;ldquo;Checkout&amp;rdquo; service which allows you to purchase a pair of shoes.</description>
+    </item>
+    
+    <item>
+      <title>What Is a Measurement?</title>
+      <link>http://localhost:1313/help/library/what-is-a-measurement/</link>
+      <pubDate>Tue, 17 May 2022 08:54:49 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/what-is-a-measurement/</guid>
+      <description>Measurements A measurement is the combination of a data source and threshold configuration.
+Data Source A data source can be
+ a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys  The most common data source is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each the time the script runs, the data point derived from the external source is saved to the database.</description>
+    </item>
+    
+    <item>
+      <title>What Is Node Alerting Configuration?</title>
       <link>http://localhost:1313/help/library/what-is-node-alert-config/</link>
       <pubDate>Sun, 15 May 2022 06:54:27 -0700</pubDate>
       
       <guid>http://localhost:1313/help/library/what-is-node-alert-config/</guid>
-      <description>Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level&amp;rdquo;. For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a lower logging level than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to the respective group (Children, Dependencies, and Measurements) will not trigger unless the respective threshold level has been breached.</description>
+      <description>Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level.&amp;rdquo; For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a logging level lower than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.
+This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level.</description>
     </item>
     
     <item>
-      <title>What Is a Runbook</title>
+      <title>What Is a Runbook?</title>
       <link>http://localhost:1313/help/library/what-is-a-runbook/</link>
       <pubDate>Tue, 05 Apr 2022 06:18:26 -0700</pubDate>
       
       <guid>http://localhost:1313/help/library/what-is-a-runbook/</guid>
-      <description>What Is a Runbook? When an issue occurs with a service, it is important to know what steps can be taken to quickly resolve the issue. This is the purpose of a runbook. It is a &amp;ldquo;how-to&amp;rdquo; guide to help new, and experienced, operators to resolve common problems that a service may encounter.
+      <description>Runbooks When an issue occurs with a service, it is important to know what steps can be taken to quickly resolve the issue. This is the purpose of a runbook. It is a &amp;ldquo;how-to&amp;rdquo; guide to help new, and experienced, operators to resolve common problems that a service may encounter.
 For example, a runbook may contain instructions on how to restart a service, provide definitions and steps to resolve issues for a service&amp;rsquo;s error codes, etc.</description>
     </item>
     

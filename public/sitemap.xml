@@ -3,13 +3,27 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2022-05-15T06:54:27-07:00</lastmod>
+    <lastmod>2022-05-17T09:45:02-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
-    <lastmod>2022-05-15T06:54:27-07:00</lastmod>
+    <lastmod>2022-05-17T09:45:02-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-is-a-node-relationship/</loc>
+    <lastmod>2022-05-17T09:45:02-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-is-a-measurement/</loc>
+    <lastmod>2022-05-17T08:54:49-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
