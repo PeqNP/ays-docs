@@ -36,7 +36,7 @@ Data Source A data source can be
       
       <guid>http://localhost:1313/help/library/what-is-node-alert-config/</guid>
       <description>Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level.&amp;rdquo; For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a logging level lower than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level.</description>
+This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level.</description>
     </item>
     
     <item>

@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="olOwOlo" /><meta name="description" content="Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level.&amp;rdquo; For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a logging level lower than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level." /><meta name="keywords" content="Hugo, theme, even" />
+This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -42,7 +42,7 @@ This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; 
 
 <meta property="og:title" content="What Is Node Alerting Configuration?" />
 <meta property="og:description" content="Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &ldquo;level.&rdquo; For example, in production you may configure your logging level to &ldquo;Error.&rdquo; Any logs emitted at a logging level lower than &ldquo;Error&rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level." />
+This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/help/library/what-is-node-alert-config/" /><meta property="article:section" content="library" />
 <meta property="article:published_time" content="2022-05-15T06:54:27-07:00" />
@@ -50,13 +50,13 @@ This form provides a way to configure this &ldquo;logging level.&rdquo; Actions 
 
 <meta itemprop="name" content="What Is Node Alerting Configuration?">
 <meta itemprop="description" content="Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &ldquo;level.&rdquo; For example, in production you may configure your logging level to &ldquo;Error.&rdquo; Any logs emitted at a logging level lower than &ldquo;Error&rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level."><meta itemprop="datePublished" content="2022-05-15T06:54:27-07:00" />
+This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level."><meta itemprop="datePublished" content="2022-05-15T06:54:27-07:00" />
 <meta itemprop="dateModified" content="2022-05-15T06:54:27-07:00" />
-<meta itemprop="wordCount" content="361">
+<meta itemprop="wordCount" content="332">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="What Is Node Alerting Configuration?"/>
 <meta name="twitter:description" content="Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &ldquo;level.&rdquo; For example, in production you may configure your logging level to &ldquo;Error.&rdquo; Any logs emitted at a logging level lower than &ldquo;Error&rdquo; (Debug, Info, Warning) will not be emitted.
-This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective Warning, Error, or Critical level."/>
+This form provides a way to configure this &ldquo;logging level.&rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -122,20 +122,18 @@ This form provides a way to configure this &ldquo;logging level.&rdquo; Actions 
   <div class="post-content">
     <h1 id="node-alerting-configuration">Node Alerting Configuration</h1>
 <p>Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &ldquo;level.&rdquo; For example, in production you may configure your logging level to &ldquo;Error.&rdquo; Any logs emitted at a logging level lower than &ldquo;Error&rdquo; (Debug, Info, Warning) will not be emitted.</p>
-<p>This form provides a way to configure this &ldquo;logging level.&rdquo; <code>Actions</code> configured to the relationship type (Children, Dependencies, and Measurements) will trigger if their health level breaches the respective <code>Warning</code>, <code>Error</code>, or <code>Critical</code> level.</p>
+<p>This form provides a way to configure this &ldquo;logging level.&rdquo; <code>Actions</code> configured to Children and Dependencies will trigger if their health level breaches the respective <code>Warning</code>, <code>Error</code>, or <code>Critical</code> level.</p>
 <p>For example, imagine you configure a node&rsquo;s <code>Dependencies</code> threshold value to <code>Warning</code> and configure a single Slack action. If any of the node&rsquo;s dependencies health breach the <code>Warning</code> threshold, a message will be sent to Slack.</p>
 <p>If you configure a node&rsquo;s <code>Dependencies</code> threshold value to <code>Error</code>, and a dependency&rsquo;s health breaches a <code>Warning</code> threshold, no message will be sent to Slack as <code>Warning</code> is a lower level than <code>Error</code>.</p>
 <p>Please refer to <a href="/help/library/what-is-a-node-relationship/">What is a Node Relationship?</a> to get more information on how the health of <code>Children</code> and <code>Dependencies</code> are determined.</p>
 <h2 id="children"><code>Children</code></h2>
-<p>Children refer to any nodes that are a child to the respective node. Therefore, if any child has a health that breaches a configured level, the respective actions will be triggered.</p>
+<p>Children are nodes that are a child to the subject node. Therefore, if any child has a health that breaches a configured level, the respective actions will be triggered.</p>
 <h2 id="dependencies"><code>Dependencies</code></h2>
-<p>Dependencies refer to any node that this subject node depends on. If any dependency breaches a configured level, the respective actions will be triggered.</p>
+<p>Dependencies are nodes that this subject node depends on. If any dependency breaches a configured level, the respective actions will be triggered.</p>
 <h2 id="measurements"><code>Measurements</code></h2>
-<p>Please refer to <a href="/help/library/what-is-a-measurement/">What is a Measurement?</a> for more context.</p>
-<p>The alerting configuration at the node level will <strong>not</strong> overwrite the behavior of actions configured to a measurement. Therefore, actions configured on a measurement will be triggered <em>in addition</em> to any actions you configure at the node level. However, turning the node configuration for measurements <code>Off</code>, will prevent actions on the measurements from being triggered.</p>
-<p>If you wish to have a single location where you configure alerting actions <strong>do not assign <code>Actions</code> to thresholds on the respective measurements.</strong> This is especially true for templates. Allow the consumer of the template to configure the actions on template measurements via the node configuration.</p>
-<p><code>Deprecatation Warning</code></p>
-<p>Measurement alerting configuration is deprecated and may be removed in the future.</p>
+<p>Configuring measurements at the subject node level allows you to have a single point of configuration for all measurements.</p>
+<p>The alerting configuration at the node level will <strong>not</strong> overwrite the behavior of actions configured to a measurement. Therefore, actions configured on a measurement will be triggered <em>in addition</em> to any actions you configure at the node level.</p>
+<p>Again, if you wish to have a single location where you configure alerting actions <strong>do not assign <code>Actions</code> to thresholds on the respective measurements.</strong> This is especially true for templates. Allow the consumer of the template to configure the actions on template measurements via the node configuration.</p>
 
   </div>
 </article>
