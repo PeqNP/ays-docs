@@ -30,7 +30,7 @@ Navigate to the respective Node in **@ys** you wish to configure the app to in *
 
 Tap on "External alerting".
 
-Enter in the app ID value into the "App ID" field under the "New Relic" group.
+Paste the entity guid value into the "Entity GUID" field under the "New Relic" group.
 
 ![New Relic External Config](/help/img/new-relic-external-config.png)
 
@@ -66,21 +66,21 @@ All this to say, that you must have configured your alerting to use workflows. A
 
 To configure a workflow, do the following:
 
-Tap on "Alerts & AI"
+Tap on "Alerts & AI."
 
-Tap on "Workflows"
+Tap on "Workflows."
 
-Tap on the policy to configure
+Tap on the policy to configure.
 
 ![New Relic Policies](/help/img/new-relic-policies.png)
 
-Scroll down to the "Notify" group and tap the "Webhook" button
+Scroll down to the "Notify" group and tap the "Webhook" button.
 
 ![New Relic Policies](/help/img/new-relic-policy-add-webhook.png)
 
-This will show the "Edit notification message" form
+This will show the "Edit notification message" form.
 
-Select `@ys` as the "Destination"
+Select `@ys` as the "Destination."
 
 Paste the following template into the "Payload template" field
 
