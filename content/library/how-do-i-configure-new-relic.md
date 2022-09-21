@@ -4,7 +4,7 @@ date: 2022-09-21T10:51:53-07:00
 draft: false
 ---
 
-# How Do I Configure New Relic
+# How Do I Configure New Relic?
 
 Configuring New Relic requires three flows:
 - Associating the New Relic Entity GUID to an **@ys** Node
