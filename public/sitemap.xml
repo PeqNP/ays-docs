@@ -3,13 +3,34 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2022-05-17T09:45:02-07:00</lastmod>
+    <lastmod>2022-09-21T10:51:53-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://localhost:1313/help/library/how-do-i-configure-new-relic/</loc>
+    <lastmod>2022-09-21T10:51:53-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/help/library/</loc>
-    <lastmod>2022-05-17T09:45:02-07:00</lastmod>
+    <lastmod>2022-09-21T10:51:53-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/how-do-i-configure-embrace/</loc>
+    <lastmod>2022-09-21T10:51:45-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-is-external-alerting-config/</loc>
+    <lastmod>2022-09-21T10:40:11-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
