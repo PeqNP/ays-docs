@@ -8,9 +8,7 @@ draft: false
 
 A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
 
-Every sensor must configure at least one threshold. The threshold defines the severity of the issue and min and max range that a queried data point must be inside of, lest the measurement be considered "unhealthy."
-
-# The Composition of a Sensor Script
+## The Composition of a Sensor Script
 
 This script is an example that shows you all of the available inputs and return types.
 
@@ -41,7 +39,18 @@ async def main(session, http_path, status, enabled, percent):
 
 **Please note:** You *must* return `null` (`None` in the Python context) if the data collection operation fails. `null` data points will emit an alert.
 
-# Template Measurements
+## Parameters and Inputs
+
+After the sensor script is saved, you will see the "Parameters" and "Return value" fields reflect the inputs and outputs of the script.
+
+You can now configure the parameters to accept a constant value *or* a value that is configured on a Node property.
+
+- TODO: How to create node properties
+- TODO: How to assign node properties to a parameter
+
+## Template Measurements
+
+Template measurements are measurements that belong to a template node.
 
 Please refer to [What is a Template Node?]({{< relref "library/what-is-a-template-node.md" >}}) first, in order to understand the function of templates.
 

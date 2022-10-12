@@ -70,8 +70,8 @@ For example, imagine you have a group of services that send data to New Relic.</
       
       <guid>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</guid>
       <description>How Do I Configure a Measurment Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
-Every sensor must configure at least one threshold. The threshold defines the severity of the issue and min and max range that a queried data point must be inside of, lest the measurement be considered &amp;ldquo;unhealthy.&amp;rdquo;
-The Composition of a Sensor Script This script is an example that shows you all of the available inputs and return types.</description>
+The Composition of a Sensor Script This script is an example that shows you all of the available inputs and return types.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 # Import the `ays` library.</description>
     </item>
     
     <item>
