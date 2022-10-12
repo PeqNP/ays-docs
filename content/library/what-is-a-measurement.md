@@ -6,23 +6,26 @@ draft: false
 
 # Measurements
 
-A measurement is the combination of a data source and threshold configuration.
+A measurement is the combination of a sensor (data source) and threshold configuration.
 
-## Data Source
+## Sensor
 
-A data source can be
+A sensor can be
 
 1. a script that is executed at a configured interval (i.e. every 1 minute)
-1. a service that sends data points directly to @ys
+1. a service that sends data points directly to **@ys**
 
-The most common data source is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each the time the script runs, the data point derived from the external source is saved to the database.
+The most common sensor type is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each time the script runs, **@ys** will query the data source and log the return value.
 
 ## Threshold Configuration
 
-A threshold configuration defines the nominal state of a Measurement from a collected data point or a set of collected data points over time. More simply, it defines what it means for a measurement to be "healthy." The threshold's minimum and maximum values define if the data points represent a "healthy", `Warning`, `Error`, or `Critical` state.
+A threshold configuration defines the "health" (nominal state) of a measurement. The nominal state is any value between a min and/or max range. If the data points logged from the sensor are inside the min or max range, a measurement is considered "healthy." If the data points logged fall outside of the min or max range, the measurement will be considered "unhealthy."
 
-For example, if a data point breaches a `Warning` threshold, then the measurement will be considered in a `Warning` state. This state is used to determine the health of the node that the measurement is associated to. A node's "health" value also propagates to its dependents and parents. Rather, if this node (which will we refer to as node "A") is a dependency to node "B", then node B's health may be affected by node A's health by virtue of it being dependent on node A.
+You can also configure a measurement's alerting level. The alerting levels are `Warning`, `Error`, and `Critical`. Each alerting level has their own "weight". The greater the "weight", the more it will affect the health of a Node.
 
-```
-Measurement with `Warning` state -> affects Node A health -> affects Node B health (dependent on A)
-```
+For example, if a data point breaches a `Warning` threshold, then the measurement will be considered in a `Warning` state. This `Warning` state may place the measurement's node in a `Warning` health state.
+
+## More Reading
+
+- [How do I configure a measurement sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}})
+- [How is node health determined?]({{< relref "library/how-is-node-health-determined.md" >}})

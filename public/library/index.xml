@@ -6,7 +6,74 @@
     <description>Recent content in Libraries on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Oct 2022 18:49:25 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 08:12:59 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Is Node Health Determined</title>
+      <link>http://localhost:1313/help/library/how-is-node-health-determined/</link>
+      <pubDate>Wed, 12 Oct 2022 08:12:59 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-is-node-health-determined/</guid>
+      <description>How Is Node Health Determined? A node&amp;rsquo;s health is determined by averaging all of the health values of its measurements, children, dependencies, and external system measurements.
+If a node&amp;rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.
+For example, if a node (which will we refer to as node &amp;ldquo;A&amp;rdquo;) is a dependency to node &amp;ldquo;B&amp;rdquo;, then node B&amp;rsquo;s health will be affected by node A&amp;rsquo;s health by virtue of it being dependent on node A.</description>
+    </item>
+    
+    <item>
+      <title>@ys API Reference</title>
+      <link>http://localhost:1313/help/library/ays-api-reference/</link>
+      <pubDate>Wed, 12 Oct 2022 07:27:37 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/ays-api-reference/</guid>
+      <description>@ys API Reference ays - Functional Helpers The functional helpers allow you to define the inputs and outputs of a sensor function.
+Please refer to How do I Configure a measurement sensor? for an example of all supported inputs and outputs.
+ays.api - Sensor API ays.api.ping(host)
+Ping host and receive a value in milliseconds.</description>
+    </item>
+    
+    <item>
+      <title>How Do I Query a Server</title>
+      <link>http://localhost:1313/help/library/how-do-i-query-a-server/</link>
+      <pubDate>Wed, 12 Oct 2022 07:21:13 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-do-i-query-a-server/</guid>
+      <description>How Do I Query a Server? This tutorial will show you how to query a HTTP server.
+1 2 3 4 5 6 7 8 import ays @ays.param(str, &amp;#34;account_host&amp;#34;) @ays.returns(&amp;#34;num_accounts&amp;#34;) async def main(session, account_host): async with session.http.get(account_host) as resp: data = await resp.json() return data[&amp;#34;num_accounts&amp;#34;] </description>
+    </item>
+    
+    <item>
+      <title>How Do I Ping a Host</title>
+      <link>http://localhost:1313/help/library/how-do-i-ping-a-host/</link>
+      <pubDate>Wed, 12 Oct 2022 07:10:54 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-do-i-ping-a-host/</guid>
+      <description>How Do I Ping a Host? This tutorial will show you how to ping a server.
+Please note: you can associate the Bithead template node com.bithead.template.ping to avoid writing this code.
+1 2 3 4 5 6 7 8 9 10 import ays import time from ays.api import ping @ays.param(str, &amp;#34;host&amp;#34;) @ays.returns(&amp;#34;ms&amp;#34;) async def main(session, host): ms = await ping(host) return ms You will notice this sensor imports ping from the ays.</description>
+    </item>
+    
+    <item>
+      <title>What Is a Template Node</title>
+      <link>http://localhost:1313/help/library/what-is-a-template-node/</link>
+      <pubDate>Wed, 12 Oct 2022 06:53:57 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/what-is-a-template-node/</guid>
+      <description>What Is a Template Node? A template node is designed to represent a type of system in your organization. You use them to measure like systems in the same way.
+They can also represent a common utility. For example, Bithead has several utility template nodes such as com.bithead.template.ping and com.bithead.template.query.
+Another way to think of template nodes as that they are composed of a common library of functions (measurements).
+For example, imagine you have a group of services that send data to New Relic.</description>
+    </item>
+    
+    <item>
+      <title>How Do I Configure a Measurement Sensor</title>
+      <link>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</link>
+      <pubDate>Tue, 11 Oct 2022 19:24:46 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</guid>
+      <description>How Do I Configure a Measurment Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
+Every sensor must configure at least one threshold. The threshold defines the severity of the issue and min and max range that a queried data point must be inside of, lest the measurement be considered &amp;ldquo;unhealthy.&amp;rdquo;
+The Composition of a Sensor Script This script is an example that shows you all of the available inputs and return types.</description>
+    </item>
+    
     <item>
       <title>How Do I Connect Slack</title>
       <link>http://localhost:1313/help/library/how-do-i-connect-slack/</link>
@@ -70,9 +137,9 @@ Dependent relationships are defined by a node A depending on another node B for 
       <pubDate>Tue, 17 May 2022 08:54:49 -0700</pubDate>
       
       <guid>http://localhost:1313/help/library/what-is-a-measurement/</guid>
-      <description>Measurements A measurement is the combination of a data source and threshold configuration.
-Data Source A data source can be
-a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys The most common data source is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each the time the script runs, the data point derived from the external source is saved to the database.</description>
+      <description>Measurements A measurement is the combination of a sensor (data source) and threshold configuration.
+Sensor A sensor can be
+a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys The most common sensor type is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each time the script runs, @ys will query the data source and log the return value.</description>
     </item>
     
     <item>
