@@ -6,7 +6,19 @@
     <description>Recent content on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Sep 2022 10:51:53 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Oct 2022 18:49:25 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Do I Connect Slack</title>
+      <link>http://localhost:1313/help/library/how-do-i-connect-slack/</link>
+      <pubDate>Tue, 11 Oct 2022 18:49:25 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-do-i-connect-slack/</guid>
+      <description>How Do I Connect Slack? To integrate Slack, you must first install the Slack app in your organization&amp;rsquo;s Slack workspace.
+To do this, open @ys, and navigate to the root node of your organization. (i.e. com.bithead)
+Update the root node (Tap on Update mode and then tap the root node) Tap on &amp;ldquo;Organization Configuration&amp;rdquo; Tap on &amp;ldquo;Connect Slack&amp;rdquo; This will open Safari.
+Install and provide permissions to the @ys app for your workspace.</description>
+    </item>
+    
     <item>
       <title>How Do I Configure New Relic</title>
       <link>http://localhost:1313/help/library/how-do-i-configure-new-relic/</link>
