@@ -55,7 +55,7 @@ a script that is executed at a configured interval (i.e. every 1 minute) a servi
 Sensor A sensor can be
 a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys The most common sensor type is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each time the script runs, @ys will query the data source and log the return value."><meta itemprop="datePublished" content="2022-05-17T08:54:49-07:00" />
 <meta itemprop="dateModified" content="2022-05-17T08:54:49-07:00" />
-<meta itemprop="wordCount" content="226">
+<meta itemprop="wordCount" content="275">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="What Is a Measurement?"/>
 <meta name="twitter:description" content="Measurements A measurement is the combination of a sensor (data source) and threshold configuration.
@@ -137,10 +137,17 @@ a script that is executed at a configured interval (i.e. every 1 minute) a servi
 <p>A threshold configuration defines the &ldquo;health&rdquo; (nominal state) of a measurement. The nominal state is any value between a min and/or max range. If the data points logged from the sensor are inside the min or max range, a measurement is considered &ldquo;healthy.&rdquo; If the data points logged fall outside of the min or max range, the measurement will be considered &ldquo;unhealthy.&rdquo;</p>
 <p>You can also configure a measurement&rsquo;s alerting level. The alerting levels are <code>Warning</code>, <code>Error</code>, and <code>Critical</code>. Each alerting level has their own &ldquo;weight&rdquo;. The greater the &ldquo;weight&rdquo;, the more it will affect the health of a Node.</p>
 <p>For example, if a data point breaches a <code>Warning</code> threshold, then the measurement will be considered in a <code>Warning</code> state. This <code>Warning</code> state may place the measurement&rsquo;s node in a <code>Warning</code> health state.</p>
+<h2 id="types-of-measurements">Types of Measurements</h2>
+<ul>
+<li>Normal: Allows owner of measurement to configure every property of the measurement.</li>
+<li>Template: Allows owner of measurement to configure most properties of the measurement, including thresholds, etc.</li>
+<li>Reference: A measurement that references another measurement&rsquo;s configuration. These measurements are read-only.</li>
+</ul>
 <h2 id="more-reading">More Reading</h2>
 <ul>
 <li><a href="/help/library/how-do-i-configure-a-measurement-sensor/">How do I configure a measurement sensor?</a></li>
 <li><a href="/help/library/how-is-node-health-determined/">How is node health determined?</a></li>
+<li><a href="/help/library/how-do-i-modify-a-reference-measurement/">How do I modify a Reference Measurement?</a></li>
 </ul>
 
   </div>

@@ -3,19 +3,33 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2022-10-12T08:12:59-07:00</lastmod>
+    <lastmod>2022-11-05T07:33:56-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/help/library/how-is-node-health-determined/</loc>
-    <lastmod>2022-10-12T08:12:59-07:00</lastmod>
+    <loc>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</loc>
+    <lastmod>2022-11-05T07:33:56-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
+    <lastmod>2022-11-05T07:33:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-is-a-valid-node-name/</loc>
+    <lastmod>2022-11-04T14:03:49-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/how-is-node-health-determined/</loc>
     <lastmod>2022-10-12T08:12:59-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

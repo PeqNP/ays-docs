@@ -25,7 +25,14 @@ You can also configure a measurement's alerting level. The alerting levels are `
 
 For example, if a data point breaches a `Warning` threshold, then the measurement will be considered in a `Warning` state. This `Warning` state may place the measurement's node in a `Warning` health state.
 
+## Types of Measurements
+
+- Normal: Allows owner of measurement to configure every property of the measurement.
+- Template: Allows owner of measurement to configure most properties of the measurement, including thresholds, etc.
+- Reference: A measurement that references another measurement's configuration. These measurements are read-only.
+
 ## More Reading
 
 - [How do I configure a measurement sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}})
 - [How is node health determined?]({{< relref "library/how-is-node-health-determined.md" >}})
+- [How do I modify a Reference Measurement?]({{< relref "library/how-do-i-modify-a-reference-measurement.md" >}})

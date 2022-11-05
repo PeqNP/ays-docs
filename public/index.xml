@@ -6,7 +6,27 @@
     <description>Recent content on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Oct 2022 08:12:59 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Nov 2022 07:33:56 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Do I Modify a Reference Measurement</title>
+      <link>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</link>
+      <pubDate>Sat, 05 Nov 2022 07:33:56 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</guid>
+      <description>How do I modify a Reference Measurement? Reference measurements inherit another measurement&amp;rsquo;s configuration. Therefore, they can not be edited directly. To update the configuration used by a reference measurement, you must update the configuration on the measurement it references.
+As an example, imagine you are viewing a list of measurements on a node. A reference measurement will display a message, &amp;ldquo;Reference measurement to com.example.service&amp;rdquo;. To update this reference measurement&amp;rsquo;s configuration, you must modify the respective measurement that is associated to the com.</description>
+    </item>
+    
+    <item>
+      <title>What Is a Valid Node Name</title>
+      <link>http://localhost:1313/help/library/what-is-a-valid-node-name/</link>
+      <pubDate>Fri, 04 Nov 2022 14:03:49 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/what-is-a-valid-node-name/</guid>
+      <description>What Is a Valid Node Name? At times, the system may emit a warning stating that you have provided an invalid node name. Here are the rules @ys uses to determine if a node name is valid:
+A node name must be at least one character A node name must be all lowercase. In most contexts, this is done for you automatically. More specifically, a node name must be within the range of characters a-z0-9_- A node name must be within the range of characters a-z A node name may not be a reserved name.</description>
+    </item>
+    
     <item>
       <title>How Is Node Health Determined</title>
       <link>http://localhost:1313/help/library/how-is-node-health-determined/</link>
