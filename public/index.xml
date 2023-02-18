@@ -6,7 +6,19 @@
     <description>Recent content on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Nov 2022 07:33:56 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 10:33:39 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Is Node Health Computed</title>
+      <link>http://localhost:1313/help/library/how-is-node-health-computed/</link>
+      <pubDate>Sat, 18 Feb 2023 10:33:39 -0800</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-is-node-health-computed/</guid>
+      <description>How is Node Health Computed? The Node Health Page is responsible for showing how the Node&amp;rsquo;s health is computed.
+The Overall Health is computed by averaging all object and alert health.
+Discrepency Messaging Do see you see a message like this?
+&amp;ldquo;3 not found, 2 extra samples&amp;rdquo; OR &amp;ldquo;3 not found&amp;rdquo; OR &amp;ldquo;2 extra samples&amp;rdquo; This indicates a discrepenancy between the object and its respective sample data. This should never happen.</description>
+    </item>
+    
     <item>
       <title>How Do I Modify a Reference Measurement</title>
       <link>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</link>
