@@ -6,7 +6,30 @@
     <description>Recent content on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Feb 2023 10:33:39 -0800</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Mar 2023 14:35:04 -0700</lastBuildDate><atom:link href="http://localhost:1313/help/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is a Node Property</title>
+      <link>http://localhost:1313/help/library/what-is-a-node-property/</link>
+      <pubDate>Thu, 23 Mar 2023 14:35:04 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/what-is-a-node-property/</guid>
+      <description>What Is a Node Property? Every node has properties such as its id, name, and path. A node may also have custom properties. Properties are used by measurement sensors, interfaces, and actions.
+For example, imagine you have created a measurement sensor that is driven by a Python script. The value of the node property can be interpolated as one of the script&amp;rsquo;s parameters.
+Below is an illustration of the relationship between a node property and how it is interpolated into a sensor Python script.</description>
+    </item>
+    
+    <item>
+      <title>How to Understand Measurement Health</title>
+      <link>http://localhost:1313/help/library/how-to-understand-measurement-health/</link>
+      <pubDate>Thu, 23 Mar 2023 14:18:07 -0700</pubDate>
+      
+      <guid>http://localhost:1313/help/library/how-to-understand-measurement-health/</guid>
+      <description>How to Understand Measurement Health A node&amp;rsquo;s measurement graphs can be viewed by long-pressing on a Node and tapping the &amp;ldquo;Measure&amp;rdquo; button.
+Here you can see each measurement&amp;rsquo;s samples over time.
+Things to note:
+Measurement threshold(s) may not be visible if your samples are well below/above the respective threshold Samples that have a 0 and a red triangle are indicative of a script error. To fix this issue: Make sure all Node properties are set.</description>
+    </item>
+    
     <item>
       <title>How Is Node Health Computed</title>
       <link>http://localhost:1313/help/library/how-is-node-health-computed/</link>

@@ -36,3 +36,5 @@ For example, if a data point breaches a `Warning` threshold, then the measuremen
 - [How do I configure a measurement sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}})
 - [How is node health determined?]({{< relref "library/how-is-node-health-determined.md" >}})
 - [How do I modify a Reference Measurement?]({{< relref "library/how-do-i-modify-a-reference-measurement.md" >}})
+- [How to understand Measurement health]({{< relref "library/how-to-understand-measurement-health.md" >}})
+
