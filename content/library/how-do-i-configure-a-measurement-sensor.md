@@ -45,8 +45,7 @@ After the sensor script is saved, you will see the "Parameters" and "Return valu
 
 You can now configure the parameters to accept a constant value *or* a value that is configured on a Node property.
 
-- TODO: How to create node properties
-- TODO: How to assign node properties to a parameter
+To learn how to create and configure a node property please refer to [What Is a Node Property?]({{< relref "library/what-is-a-node-property.md" >}}).
 
 ## Template Measurements
 
