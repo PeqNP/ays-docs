@@ -5,6 +5,7 @@
     <link>http://localhost:1313/help/tags/</link>
     <description>Recent content in Tags on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:1313/help/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/help/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
