@@ -25,6 +25,14 @@ You can also configure a measurement's alerting level. The alerting levels are `
 
 For example, if a data point breaches a `Warning` threshold, then the measurement will be considered in a `Warning` state. This `Warning` state may place the measurement's node in a `Warning` health state.
 
+### Types of Thresholds
+
+- `Above` (>) - A value that is above this range will trigger an alert
+- `Below` (<) - A value that falls below this range will trigger an alert
+- `Boundary` (< `min`, > `max`) - Any value that falls outside of the `min` / `max` range will trigger an alert
+- `Equal` (=) - Any value that is equal to this threshold will trigger an alert
+- `Not Equal` (!=) - The inverse of `Equal`, where any value that does _not_ equal the threshold will trigger an alert
+
 ## Types of Measurements
 
 - Normal: Allows owner of measurement to configure every property of the measurement.
