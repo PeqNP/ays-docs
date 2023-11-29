@@ -120,10 +120,10 @@ This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; 
 <p>Children are nodes that are a child to the subject node. Therefore, if any child has a health that breaches a configured level, the respective actions will be triggered.</p>
 <h2 id="dependencies"><code>Dependencies</code></h2>
 <p>Dependencies are nodes that this subject node depends on. If any dependency breaches a configured level, the respective actions will be triggered.</p>
-<h2 id="measurements"><code>Measurements</code></h2>
-<p>Configuring measurements at the subject node level allows you to have a single point of configuration for all measurements.</p>
-<p>The alerting configuration at the node level will <strong>not</strong> overwrite the behavior of actions configured to a measurement. Therefore, actions configured on a measurement will be triggered <em>in addition</em> to any actions you configure at the node level.</p>
-<p>Again, if you wish to have a single location where you configure alerting actions <strong>do not assign <code>Actions</code> to thresholds on the respective measurements.</strong> This is especially true for templates. Allow the consumer of the template to configure the actions on template measurements via the node configuration.</p>
+<h2 id="monitors"><code>Monitors</code></h2>
+<p>Configuring monitors at the subject node level allows you to have a single point of configuration for all monitors.</p>
+<p>The alerting configuration at the node level will <strong>not</strong> overwrite the behavior of actions configured to a monitor. Therefore, actions configured on a monitor will be triggered <em>in addition</em> to any actions you configure at the node level.</p>
+<p>Again, if you wish to have a single location where you configure alerting actions <strong>do not assign <code>Actions</code> to thresholds on the respective monitors.</strong> This is especially true for templates. Allow the consumer of the template to configure the actions on template monitors via the node configuration.</p>
 
   </div>
 </article>

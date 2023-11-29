@@ -18,7 +18,7 @@
 
 <meta name="author" content="olOwOlo" /><meta name="description" content="Virtual Nodes Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.
 Virtual modes can be considered as ephemeral, although their life span depends on the context.
-The typical use case for virtual nodes is that you wish to quickly assign the same measurements to many nodes. In other words, they represent an asset or service that share the same properties." /><meta name="keywords" content="Hugo, theme, even" />
+The typical use case for virtual nodes is that you wish to quickly assign the same monitors to many nodes. In other words, they represent an asset or service that share the same properties." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -114,12 +114,12 @@ The typical use case for virtual nodes is that you wish to quickly assign the sa
     <h1 id="virtual-nodes">Virtual Nodes</h1>
 <p>Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.</p>
 <p>Virtual modes can be considered as ephemeral, although their life span depends on the context.</p>
-<p>The typical use case for virtual nodes is that you wish to quickly assign the same measurements to many nodes. In other words, they represent an asset or service that share the same properties.</p>
+<p>The typical use case for virtual nodes is that you wish to quickly assign the same monitors to many nodes. In other words, they represent an asset or service that share the same properties.</p>
 <h2 id="micro-services">Micro services</h2>
 <p>Imagine you have a micro service which can scale from 1 to N instances. Each instance must be managed the same way. At your service provides a public API that you can use to update the number of services in real-time. Now you can see the number of instances, and track the status of each micro service within the <strong>At Your Service</strong> app.</p>
 <h2 id="mobile-app">Mobile app</h2>
 <p>Your company&rsquo;s mobile app consumes more than 30 external services. You need a way to track each of these 30 services in the same way. For instance, you may wish to track latency, requests per second, error rate, etc. Create a template node that measures each data point, and assign your virtual nodes to this template. Now you can the see the health of every service you depend on within the <strong>At Your Service</strong> app.</p>
-<p>If one of the services require more finely tuned measurements (alerting threshold, sample interval, etc.), you may convert the node to a different type allowing you to make changes to it.</p>
+<p>If one of the services require more finely tuned monitors (alerting threshold, sample interval, etc.), you may convert the node to a different type allowing you to make changes to it.</p>
 <h2 id="fleet-tracking">Fleet Tracking</h2>
 <p>Imagine you own a fleet of trucks. Every truck within your fleet must be tracked and managed in the same way. For example, you may wish to track fuel consumption, idle time, etc. Virtual nodes provide a way to import your entire fleet, via a spreadsheet, in one simple step. As your fleet changes, it&rsquo;s as simple as updating the spreadsheet and re-importing the data.</p>
 

@@ -16,9 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Read-only Threshold When a Threshold is set as &amp;ldquo;read-only&amp;rdquo;, all other nodes that template from this measurement will be unable to change the configuration values of threshold actions.
+<meta name="author" content="olOwOlo" /><meta name="description" content="Read-only Threshold When a Threshold is set as &amp;ldquo;read-only&amp;rdquo;, all other nodes that template from this monitor will be unable to change the configuration values of threshold actions.
 Imagine you have a group of services which must send all alerting traffic to a specific Slack channel. You would turn on &amp;ldquo;read-only&amp;rdquo; in this context. In essence, this creates a central configuration point for your alerting configuration.
-If you are creating a measurement template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team." /><meta name="keywords" content="Hugo, theme, even" />
+If you are creating a monitor template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -112,9 +112,9 @@ If you are creating a measurement template which will be used by many teams with
           <article class="post">
   <div class="post-content">
     <h1 id="read-only-threshold">Read-only Threshold</h1>
-<p>When a Threshold is set as &ldquo;read-only&rdquo;, all other nodes that template from this measurement will be unable to change the configuration values of threshold actions.</p>
+<p>When a Threshold is set as &ldquo;read-only&rdquo;, all other nodes that template from this monitor will be unable to change the configuration values of threshold actions.</p>
 <p>Imagine you have a group of services which must send all alerting traffic to a specific Slack channel. You would turn on &ldquo;read-only&rdquo; in this context. In essence, this creates a central configuration point for your alerting configuration.</p>
-<p>If you are creating a measurement template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team. In this context, you would turn &ldquo;read-only&rdquo; off. <code>com.bithead.template.ping</code> is an example of a read-only threshold. <code>ping</code> is designed to be used by all organizations. Therefore, the Slack channel alerting configuration can be modified to use the respective team&rsquo;s channel.</p>
+<p>If you are creating a monitor template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team. In this context, you would turn &ldquo;read-only&rdquo; off. <code>com.bithead.template.ping</code> is an example of a read-only threshold. <code>ping</code> is designed to be used by all organizations. Therefore, the Slack channel alerting configuration can be modified to use the respective team&rsquo;s channel.</p>
 <p>If you are not sure which option to choose, keep &ldquo;read-only&rdquo; on.</p>
 
   </div>

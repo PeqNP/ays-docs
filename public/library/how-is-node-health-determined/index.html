@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="How Is Node Health Determined? A node&amp;rsquo;s health is determined by averaging all of the health values of its measurements, children, dependencies, and external system measurements.
+<meta name="author" content="olOwOlo" /><meta name="description" content="How Is Node Health Determined? A node&amp;rsquo;s health is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.
 If a node&amp;rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.
 For example, if a node (which will we refer to as node &amp;ldquo;A&amp;rdquo;) is a dependency to node &amp;ldquo;B&amp;rdquo;, then node B&amp;rsquo;s health will be affected by node A&amp;rsquo;s health by virtue of it being dependent on node A." /><meta name="keywords" content="Hugo, theme, even" />
 
@@ -112,7 +112,7 @@ For example, if a node (which will we refer to as node &amp;ldquo;A&amp;rdquo;) 
           <article class="post">
   <div class="post-content">
     <h1 id="how-is-node-health-determined">How Is Node Health Determined?</h1>
-<p>A node&rsquo;s health is determined by averaging all of the health values of its measurements, children, dependencies, and external system measurements.</p>
+<p>A node&rsquo;s health is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.</p>
 <p>If a node&rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.</p>
 <p>For example, if a node (which will we refer to as node &ldquo;A&rdquo;) is a dependency to node &ldquo;B&rdquo;, then node B&rsquo;s health will be affected by node A&rsquo;s health by virtue of it being dependent on node A.</p>
 <div class="highlight"><div class="chroma">
@@ -124,7 +124,7 @@ For example, if a node (which will we refer to as node &amp;ldquo;A&amp;rdquo;) 
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">Measurement</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">`</span><span class="n">Warning</span><span class="o">`</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">health</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">Monitor</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">`</span><span class="n">Warning</span><span class="o">`</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">health</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="n">health</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="nf">health</span><span class="w"> </span><span class="p">(</span><span class="n">because</span><span class="w"> </span><span class="n">it</span><span class="s1">&#39;s dependent of A)
 </span></span></span><span class="line"><span class="cl"><span class="s1">  ...
