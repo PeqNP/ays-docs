@@ -10,4 +10,4 @@ When an issue occurs with a service, it is important to know what steps can be t
 
 For example, a runbook may contain instructions on how to restart a service, provide definitions and steps to resolve issues for a service's error codes, etc.
 
-A link to your runbook will be accessible from a measurement's graph and alert notifications.
+A link to your runbook will be accessible from a monitor's graph and alert notifications.

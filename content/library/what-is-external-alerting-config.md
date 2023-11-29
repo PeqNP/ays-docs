@@ -10,7 +10,7 @@ An external system, such as Embrace and NewRelic, may be configured to send aler
 
 This is the easiest and fastest way to determine the health of your systems if you have already configured your apps, services, etc. with an external alerting system.
 
-External alerting configuration are treated as "virtual measurements." In other words, an external alert (e.g. a "Condition" in NewRelic or an "Alert" in Embrace) is similar to an **@ys** Measurement.
+External alerting configuration are treated as "virtual monitors." In other words, an external alert (e.g. a "Condition" in NewRelic or an "Alert" in Embrace) is similar to an **@ys** monitor.
 
 When an external system sends an alert for a specific condition / alert, **@ys** will translate the alerting level and update the health of the node. The health of the node can be "cured" manually by a user or automatically if the external system detects a recovery. Please note that some sytems may not send a "recovery" event. In these cases an **@ys** user must be responsible for manually curing the event from the Node's form.
 

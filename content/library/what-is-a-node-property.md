@@ -6,20 +6,20 @@ draft: false
 
 # What Is a Node Property?
 
-Every node has properties such as its `id`, `name`, and `path`. A node may also have custom properties. Properties are used by measurement sensors, interfaces, and actions.
+Every node has properties such as its `id`, `name`, and `path`. A node may also have custom properties. Properties are used by monitor sensors, interfaces, and actions.
 
-For example, imagine you have created a measurement sensor that is driven by a Python script. The value of the node property can be interpolated as one of the script's parameters.
+For example, imagine you have created a monitor sensor that is driven by a Python script. The value of the node property can be interpolated as one of the script's parameters.
 
 Below is an illustration of the relationship between a node property and how it is interpolated into a sensor Python script.
 
-![Node Measurement Graphs](/help/img/node-property-relationships.png)
+![Node Monitor Graphs](/help/img/node-property-relationships.png)
 
 When this script is executed, it will take the value of `www.zonar.com` and pass it as the value for `host` in the `main` function.
 
 ## Create a Custom Node Property
 
-If you are creating your own template measurements, interfaces, etc. you may need a custom node property. To do this:
-- Navigate to the template node that contains the template measurement(s)
+If you are creating your own template monitors, interfaces, etc. you may need a custom node property. To do this:
+- Navigate to the template node that contains the template monitor(s)
 - Tap the `Properties` row
 - Tap on the `Add property` button
 

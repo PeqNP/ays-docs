@@ -24,10 +24,10 @@ Children are nodes that are a child to the subject node. Therefore, if any child
 
 Dependencies are nodes that this subject node depends on. If any dependency breaches a configured level, the respective actions will be triggered.
 
-## `Measurements`
+## `Monitors`
 
-Configuring measurements at the subject node level allows you to have a single point of configuration for all measurements.
+Configuring monitors at the subject node level allows you to have a single point of configuration for all monitors.
 
-The alerting configuration at the node level will **not** overwrite the behavior of actions configured to a measurement. Therefore, actions configured on a measurement will be triggered _in addition_ to any actions you configure at the node level.
+The alerting configuration at the node level will **not** overwrite the behavior of actions configured to a monitor. Therefore, actions configured on a monitor will be triggered _in addition_ to any actions you configure at the node level.
 
-Again, if you wish to have a single location where you configure alerting actions **do not assign `Actions` to thresholds on the respective measurements.** This is especially true for templates. Allow the consumer of the template to configure the actions on template measurements via the node configuration.
+Again, if you wish to have a single location where you configure alerting actions **do not assign `Actions` to thresholds on the respective monitors.** This is especially true for templates. Allow the consumer of the template to configure the actions on template monitors via the node configuration.

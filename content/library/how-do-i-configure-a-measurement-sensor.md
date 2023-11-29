@@ -1,10 +1,10 @@
 ---
-title: "How Do I Configure a Measurement Sensor"
+title: "How Do I Configure a Monitor Sensor"
 date: 2022-10-11T19:24:46-07:00
 draft: false
 ---
 
-# How Do I Configure a Measurment Sensor?
+# How Do I Configure a Monitor Sensor?
 
 A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
 
@@ -47,13 +47,13 @@ You can now configure the parameters to accept a constant value *or* a value tha
 
 To learn how to create and configure a node property please refer to [What Is a Node Property?]({{< relref "library/what-is-a-node-property.md" >}}).
 
-## Template Measurements
+## Template Monitors
 
-Template measurements are measurements that belong to a template node.
+Template monitors are monitors that belong to a template node.
 
 Please refer to [What is a Template Node?]({{< relref "library/what-is-a-template-node.md" >}}) first, in order to understand the function of templates.
 
-If you find that you are writing the same sensor code for more than one measurment, consider writing a template measurement. A template measurement is like a re-usable function. For example, if your team has several services that can be measured in the same way, you may consider creating a template measurement.
+If you find that you are writing the same sensor code for more than one monitor, consider writing a template monitor. A template monitor is like a re-usable function. For example, if your team has several services that can be monitored in the same way, you should consider creating a template monitor.
 
 ## Common Sensor Operations
 

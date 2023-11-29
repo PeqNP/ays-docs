@@ -10,7 +10,7 @@ Virtual nodes are read-only nodes which inherit all properties from a template n
 
 Virtual modes can be considered as ephemeral, although their life span depends on the context.
 
-The typical use case for virtual nodes is that you wish to quickly assign the same measurements to many nodes. In other words, they represent an asset or service that share the same properties.
+The typical use case for virtual nodes is that you wish to quickly assign the same monitors to many nodes. In other words, they represent an asset or service that share the same properties.
 
 ## Micro services
 
@@ -20,7 +20,7 @@ Imagine you have a micro service which can scale from 1 to N instances. Each ins
 
 Your company's mobile app consumes more than 30 external services. You need a way to track each of these 30 services in the same way. For instance, you may wish to track latency, requests per second, error rate, etc. Create a template node that measures each data point, and assign your virtual nodes to this template. Now you can the see the health of every service you depend on within the **At Your Service** app.
 
-If one of the services require more finely tuned measurements (alerting threshold, sample interval, etc.), you may convert the node to a different type allowing you to make changes to it.
+If one of the services require more finely tuned monitors (alerting threshold, sample interval, etc.), you may convert the node to a different type allowing you to make changes to it.
 
 ## Fleet Tracking
 

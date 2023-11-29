@@ -10,7 +10,7 @@ draft: false
 
 The functional helpers allow you to define the inputs and outputs of a sensor function.
 
-Please refer to [How do I Configure a measurement sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}}) for an example of all supported inputs and outputs.
+Please refer to [How do I Configure a monitor sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}}) for an example of all supported inputs and outputs.
 
 ## `ays.api` - Sensor API
 
