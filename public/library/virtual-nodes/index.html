@@ -17,8 +17,9 @@
 
 
 <meta name="author" content="olOwOlo" /><meta name="description" content="Virtual Nodes Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.
-Virtual modes can be considered as ephemeral, although their life span depends on the context.
-The typical use case for virtual nodes is that you wish to quickly assign the same monitors to many nodes. In other words, they represent an asset or service that share the same properties." /><meta name="keywords" content="Hugo, theme, even" />
+Virtual nodes can be considered as ephemeral, although their life span depends on the context.
+The status of every virtual node is queried at the same time.
+The typical use case for virtual nodes is quickly assign the same monitor(s), to many nodes, and query the status of each node using a single query." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -113,15 +114,128 @@ The typical use case for virtual nodes is that you wish to quickly assign the sa
   <div class="post-content">
     <h1 id="virtual-nodes">Virtual Nodes</h1>
 <p>Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.</p>
-<p>Virtual modes can be considered as ephemeral, although their life span depends on the context.</p>
-<p>The typical use case for virtual nodes is that you wish to quickly assign the same monitors to many nodes. In other words, they represent an asset or service that share the same properties.</p>
-<h2 id="micro-services">Micro services</h2>
-<p>Imagine you have a micro service which can scale from 1 to N instances. Each instance must be managed the same way. At your service provides a public API that you can use to update the number of services in real-time. Now you can see the number of instances, and track the status of each micro service within the <strong>At Your Service</strong> app.</p>
-<h2 id="mobile-app">Mobile app</h2>
-<p>Your company&rsquo;s mobile app consumes more than 30 external services. You need a way to track each of these 30 services in the same way. For instance, you may wish to track latency, requests per second, error rate, etc. Create a template node that measures each data point, and assign your virtual nodes to this template. Now you can the see the health of every service you depend on within the <strong>At Your Service</strong> app.</p>
-<p>If one of the services require more finely tuned monitors (alerting threshold, sample interval, etc.), you may convert the node to a different type allowing you to make changes to it.</p>
-<h2 id="fleet-tracking">Fleet Tracking</h2>
-<p>Imagine you own a fleet of trucks. Every truck within your fleet must be tracked and managed in the same way. For example, you may wish to track fuel consumption, idle time, etc. Virtual nodes provide a way to import your entire fleet, via a spreadsheet, in one simple step. As your fleet changes, it&rsquo;s as simple as updating the spreadsheet and re-importing the data.</p>
+<p>Virtual nodes can be considered as ephemeral, although their life span depends on the context.</p>
+<p>The status of every virtual node is queried at <em>the same time</em>.</p>
+<p>The typical use case for virtual nodes is quickly assign the same monitor(s), to many nodes, and query the status of each node using a single query.</p>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="status-availability">Status availability</h3>
+<p>A service you depend on, such as Atlassian, provides a public status page which includes every service and its respective status. To monitor this resource, you would request the URL, parse the page&rsquo;s contents, and then transform each service and status into a virtual node.</p>
+<h3 id="micro-services">Micro services</h3>
+<p>Imagine you have a micro service which can scale from 1 to N instances. Each instance&rsquo;s resources must be tracked the same way. For example, the CPU, RAM, and disk usage.</p>
+<p>This can be accomplished with the combination of a template node and virtual nodes. The primary monitor on your template node will query a server for the list of microservice instances along with status. Then, add monitors on the template node that represent the CPU, RAM, and disk usage. The data queried from the primary monitor will then filtered to the respective monitors for each instance.</p>
+<h3 id="fleet-management">Fleet Management</h3>
+<p>Imagine you own a fleet of trucks. Every truck within your fleet must be tracked and managed the same way. For example, you may wish to track fuel consumption, idle time, etc. This can be accomplished by querying a database that contains your fleet along with the respective status of each truck. As your fleet changes, update the database and <strong>At Your Service</strong> will automatically add and remove the assets that are tracked.</p>
+<h2 id="example-scripts">Example Scripts</h2>
+<p>Using our Status availability use case, below shows a <em>very</em> simple example that returns a list of services along with their status.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ays</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;url&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.returns</span><span class="p">(</span><span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># TODO: Query the URL, returning the page</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># TODO: Parse the page</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># This is what the transformed values should look like</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># These are arbitrary values that you can change to your liking. You would then create</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># thresholds, on this monitor, that would trigger based on the values returned here.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;trello&#34;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="c1"># 7 could mean &#39;Degraded Performance&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;jira&#34;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="c1"># 10 could mean &#39;Operational&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;confluence&#34;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Again, this return value is used in contexts where only <em>one</em> health value is associated to each virtual node.</p>
+<p>Using our Fleet Management use case, below shows a <em>very</em> simple example that returns a list of trucks, along with each truck&rsquo;s respective monitor values, queried from a database.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ays</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;ip_address&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;database&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.returns</span><span class="p">(</span><span class="n">ays</span><span class="o">.</span><span class="n">VirtualElder</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">ip_address</span><span class="p">,</span> <span class="n">database</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># TODO: Connect to database</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># TODO: Map table rows to `VirtualNode`s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># When returning multiple values, @ys needs to know what position each value</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># represents. The `ays.VirtualElder` type allows us to define this</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># relationship.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># The value for `monitors` can be a static list of monitors.</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># The value for `nodes` will contain your transformed values.</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ays</span><span class="o">.</span><span class="n">VirtualElder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># These field names are used to filter values to respective sibling measurements</span>
+</span></span><span class="line"><span class="cl">        <span class="n">names</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;idle&#34;</span><span class="p">,</span> <span class="c1"># How long truck is idling, in minutes</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;burn&#34;</span><span class="p">,</span> <span class="c1"># GPH burn rate</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;fuel&#34;</span><span class="p">,</span> <span class="c1"># Percent fuel remaining in tank</span>
+</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nodes</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># The monitor values share the same index as their respective field above</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># e.g. Index 0 = idle, 1 = burn, 2 = fuel</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;TWA-0001&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mi">87</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;TWA-0002&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mi">60</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ays</span><span class="o">.</span><span class="n">VirtualNode</span><span class="p">(</span><span class="s2">&#34;TCA-0001&#34;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">15.45</span><span class="p">,</span> <span class="mi">45</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Three additional sibling monitors would live next to the primary (elder) monitor (the monitor shown above). Each of the sibling monitors will reference the respective field they are interested in. Such as <code>idle</code>, <code>burn</code>, or <code>fuel</code>.</p>
+<p>Now, every truck will track its respective <code>idle</code>, <code>burn</code>, and <code>fuel</code> rate.</p>
+<p>If you want to track different types of vehicles, but use the same monitors, create a template node with the above monitor. Then, create a node for each vehicle type that templates from this. This will allow you to tune the threshold trigger values for each respective vehicle type.</p>
 
   </div>
 </article>

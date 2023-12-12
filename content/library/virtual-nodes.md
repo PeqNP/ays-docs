@@ -62,20 +62,20 @@ import ays
 
 @ays.param(str, "ip_address")
 @ays.param(str, "database")
-@ays.returns(ays.VirtualMonitor)
+@ays.returns(ays.VirtualElder)
 async def main(session, ip_address, database):
     # TODO: Connect to database
     # TODO: Map table rows to `VirtualNode`s
 
     # When returning multiple values, @ys needs to know what position each value
-    # represents. The `ays.VirtualMonitor` type allows us to define this
+    # represents. The `ays.VirtualElder` type allows us to define this
     # relationship.
     #
     # The value for `monitors` can be a static list of monitors.
     # The value for `nodes` will contain your transformed values.
-    return ays.VirtualMonitor(
-        # These fields are used to filter values to respective sibling measurements
-        monitors: [
+    return ays.VirtualElder(
+        # These field names are used to filter values to respective sibling measurements
+        names: [
             "idle", # How long truck is idling, in minutes
             "burn", # GPH burn rate
             "fuel", # Percent fuel remaining in tank
