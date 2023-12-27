@@ -1,5 +1,5 @@
 ---
-title: "What Is a Measurement?"
+title: "What Is a Monitor?"
 date: 2022-05-17T08:54:49-07:00
 draft: false
 ---
@@ -42,7 +42,7 @@ For example, if a data point breaches a `Warning` threshold, then the monitor wi
 ## More Reading
 
 - [How do I configure a monitor sensor?]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}})
-- [How is node health determined?]({{< relref "library/how-is-node-health-determined.md" >}})
+- [How is node health computed?]({{< relref "library/how-is-node-health-computed.md" >}})
 - [How do I modify a reference monitor?]({{< relref "library/how-do-i-modify-a-reference-measurement.md" >}})
 - [How to understand monitor health]({{< relref "library/how-to-understand-measurement-health.md" >}})
 

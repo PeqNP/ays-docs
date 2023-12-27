@@ -4,13 +4,13 @@ date: 2022-10-11T19:24:46-07:00
 draft: false
 ---
 
-# How Do I Configure a Monitor Sensor?
+# How Do I Write a Monitor Sensor?
 
 A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
 
 ## The Composition of a Sensor Script
 
-This script is an example that shows you all of the available inputs and return types.
+This script is an example that shows you all of the available input and return types.
 
 ```python
 # Import the `ays` library. You are not restricted as to which libraries
@@ -18,8 +18,7 @@ This script is an example that shows you all of the available inputs and return 
 # anything from `ays_lib`.
 import ays
 
-# These are all of the supported parameters that can be provided to a
-# sensor function.
+# Below are all supported parameter types for sensor functions.
 @ays.param(str, "http_path")
 @ays.param(int, "status")
 @ays.param(bool, "enabled")
@@ -27,23 +26,28 @@ import ays
 # A sensor function may return a single optional `int` OR it can return
 # an array of optional `int`s.
 @ays.returns("num_requests")
-# Syntax to return an array of optional `int`s.
+# For "elder" monitors, you would use the following to return multiple values
+# that "sibling" monitors could choose from.
 # @ays.returns(["num_requests", "ms"])
 async def main(session, http_path, status, enabled, percent):
-    # Query a remote service that returns JSON
+    """ The `session` variable is always the first variable passed to your sensor.
+    `@ays.param`s follow after `session` in the order they were defined. """
+    # Example of how to query a remote service that returns JSON
     async with session.http.get(http_path) as resp:
         data = await resp.json()
         # Return the data value. Again, this must be an optional `int`
         return data["num_requests"]
 ```
 
-**Please note:** You *must* return `null` (`None` in the Python context) if the data collection operation fails. `null` data points will emit an alert.
+**Please note:** You *must* return `null` (`None` in the Python context) if the data collection operation fails. `null` data points will emit an alert. You may also `raise` an `Exception` if something fails. The `Exception` message will be associated to the sample's value and can be viewed within the app for debugging.
+
+**You must `Run` your script** if any parameter (`@ays.param`) or return (`@ays.returns`) value changes! This will almost always be true when writing a new sensor. The process of transforming your inputs and outputs, to an object that the app can understand, is done by the server. *You will lose changes to your work if you fail to do this.*
 
 ## Parameters and Inputs
 
-After the sensor script is saved, you will see the "Parameters" and "Return value" fields reflect the inputs and outputs of the script.
+After the sensor script is saved, you will see the "Parameters" and "Return value" fields reflect the inputs and outputs of the script on the sensor page.
 
-You can now configure the parameters to accept a constant value *or* a value that is configured on a Node property.
+You can now configure the parameters to accept a constant value *or* a Node property value.
 
 To learn how to create and configure a node property please refer to [What Is a Node Property?]({{< relref "library/what-is-a-node-property.md" >}}).
 
