@@ -23,16 +23,13 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 - [API Reference]({{< relref "library/ays-api-reference.md" >}}) - Utility libraries for sensor scripts
 - [3rd Party Libraries]({{< relref "library/ays-third-party-libs.md" >}}) - Supported 3rd party libraries, and usage, installed on @ys servers.
 
-## Monitor Sensor Tutorials
-
-These documents are designed to help you use the **@ys** (At Your Service) mobile application.
+## Monitors & Sensors
 
 - [What is a monitor]({{< relref "library/what-is-a-measurement.md" >}})
 - [How do I write a monitor sensor]({{< relref "library/how-do-i-configure-a-measurement-sensor.md" >}})
 - [How do I query a server]({{< relref "library/how-do-i-query-a-server.md" >}})
 - [How do I ping a host]({{< relref "library/how-do-i-ping-a-host.md" >}})
 - [Invalid call parameters]({{< relref "library/invalid-call-parameters.md" >}})
-
 
 ## App-specific Contextual Help
 
