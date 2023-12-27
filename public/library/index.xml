@@ -6,168 +6,214 @@
     <description>Recent content in Libraries on At Your Service Help Library</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Mar 2023 15:18:18 -0700</lastBuildDate>
+    <copyright>Bithead LLC 2023</copyright>
+    <lastBuildDate>Wed, 27 Dec 2023 07:53:24 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>@ys 3rd Party Libraries</title>
+      <link>http://localhost:1313/help/library/ays-third-party-libs/</link>
+      <pubDate>Wed, 27 Dec 2023 07:53:24 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/ays-third-party-libs/</guid>
+      <description>@ys 3rd Party Libraries The following 3rd party libraries are installed on the main @ys server at api.bithead.io.
+aiohttp v3.8.5 An asynchronous HTTP client/server for asyncio and Python.
+Documentation
+An instance of the aiohttp.ClientSession can be accessed from session.http. Below is an example of how to query a website and derive the amount of time it takes to access the resource (this is also the com.bithead.template.query template monitor).
+Example Usage 1 2 3 4 5 6 7 8 9 10 11 import ays import time @ays.</description>
+    </item>
     <item>
       <title>Contact Ays Representative</title>
       <link>http://localhost:1313/help/library/contact-ays-representative/</link>
       <pubDate>Thu, 23 Mar 2023 15:18:18 -0700</pubDate>
       <guid>http://localhost:1313/help/library/contact-ays-representative/</guid>
-      <description>Contact @ys Representative To contact an @ys representative please call 253-329-1280.</description>
+      <description>Contact Us Phone: 253-329-1280 Email: bitheadrl@protonmail.com DM on X </description>
     </item>
     <item>
       <title>What Is a Node Property</title>
       <link>http://localhost:1313/help/library/what-is-a-node-property/</link>
       <pubDate>Thu, 23 Mar 2023 14:35:04 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-node-property/</guid>
-      <description>What Is a Node Property? Every node has properties such as its id, name, and path. A node may also have custom properties. Properties are used by monitor sensors, interfaces, and actions.&#xA;For example, imagine you have created a monitor sensor that is driven by a Python script. The value of the node property can be interpolated as one of the script&amp;rsquo;s parameters.&#xA;Below is an illustration of the relationship between a node property and how it is interpolated into a sensor Python script.</description>
+      <description>What Is a Node Property? Every node has properties such as its id, name, and path. A node may also have custom properties. Properties are used by monitor sensors, interfaces, and actions.
+For example, imagine you have created a monitor sensor that is driven by a Python script. The value of the node property can be interpolated as one of the script&amp;rsquo;s parameters.
+Below is an illustration of the relationship between a node property and how it is interpolated into a sensor Python script.</description>
     </item>
     <item>
       <title>How to Understand Monitor Health</title>
       <link>http://localhost:1313/help/library/how-to-understand-measurement-health/</link>
       <pubDate>Thu, 23 Mar 2023 14:18:07 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-to-understand-measurement-health/</guid>
-      <description>How to Understand Monitor Health A node&amp;rsquo;s monitor graphs can be viewed by long-pressing on a Node and tapping the &amp;ldquo;Monitor&amp;rdquo; button.&#xA;Here you can see each monitor&amp;rsquo;s samples over time.&#xA;Things to note:&#xA;Monitor threshold(s) may not be visible if your samples are well below/above the respective threshold Samples that have a 0 and a red triangle are indicative of a script error. To fix this issue: Make sure all Node properties are set.</description>
+      <description>How to Understand Monitor Health A node&amp;rsquo;s monitor graphs can be viewed by long-pressing on a Node and tapping the &amp;ldquo;Monitor&amp;rdquo; button.
+Here you can see each monitor&amp;rsquo;s samples over time.
+Things to note:
+Monitor threshold(s) may not be visible if your samples are well below/above the respective threshold Samples that have a 0 and a red triangle are indicative of a script error. To fix this issue: Make sure all Node properties are set.</description>
     </item>
     <item>
       <title>How Is Node Health Computed</title>
       <link>http://localhost:1313/help/library/how-is-node-health-computed/</link>
       <pubDate>Sat, 18 Feb 2023 10:33:39 -0800</pubDate>
       <guid>http://localhost:1313/help/library/how-is-node-health-computed/</guid>
-      <description>How is Node Health Computed? The Node Health Page is responsible for showing how the Node&amp;rsquo;s health is computed.&#xA;The Overall Health is computed by averaging all object and alert health.&#xA;Discrepency Messaging Do see you see a message like this?&#xA;&amp;ldquo;3 not found, 2 extra samples&amp;rdquo; OR &amp;ldquo;3 not found&amp;rdquo; OR &amp;ldquo;2 extra samples&amp;rdquo; This indicates a discrepenancy between the object and its respective sample data. This should never happen.</description>
+      <description>How is Node Health Computed? The Node Health Page is responsible for showing how the Node&amp;rsquo;s health is computed.
+The Overall Health is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.
+If a node&amp;rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.</description>
     </item>
     <item>
       <title>How Do I Modify a Reference Monitor</title>
       <link>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</link>
       <pubDate>Sat, 05 Nov 2022 07:33:56 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-modify-a-reference-measurement/</guid>
-      <description>How do I modify a Reference Monitor? Reference monitors inherit another monitor&amp;rsquo;s configuration. Therefore, they can not be edited directly. To update the configuration used by a reference monitor, you must update the configuration on the monitor it references.&#xA;As an example, imagine you are viewing a list of monitors on a node. A reference monitor will display a message, &amp;ldquo;Reference monitor to com.example.service&amp;rdquo;. To update this reference monitor&amp;rsquo;s configuration, you must modify the respective monitor that is associated to the com.</description>
+      <description>How do I modify a Reference Monitor? Reference monitors inherit another monitor&amp;rsquo;s configuration. Therefore, they can not be edited directly. To update the configuration used by a reference monitor, you must update the configuration on the monitor it references.
+As an example, imagine you are viewing a list of monitors on a node. A reference monitor will display a message, &amp;ldquo;Reference monitor to com.example.service&amp;rdquo;. To update this reference monitor&amp;rsquo;s configuration, you must modify the respective monitor that is associated to the com.</description>
     </item>
     <item>
       <title>What Is a Valid Node Name</title>
       <link>http://localhost:1313/help/library/what-is-a-valid-node-name/</link>
       <pubDate>Fri, 04 Nov 2022 14:03:49 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-valid-node-name/</guid>
-      <description>What Is a Valid Node Name? At times, the system may emit a warning stating that you have provided an invalid node name. Here are the rules @ys uses to determine if a node name is valid:&#xA;A node name must be at least one character A node name must be all lowercase. In most contexts, this is done for you automatically. More specifically, a node name must be within the range of characters a-z0-9_- A node name must be within the range of characters a-z A node name may not be a reserved name.</description>
-    </item>
-    <item>
-      <title>How Is Node Health Determined</title>
-      <link>http://localhost:1313/help/library/how-is-node-health-determined/</link>
-      <pubDate>Wed, 12 Oct 2022 08:12:59 -0700</pubDate>
-      <guid>http://localhost:1313/help/library/how-is-node-health-determined/</guid>
-      <description>How Is Node Health Determined? A node&amp;rsquo;s health is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.&#xA;If a node&amp;rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.&#xA;For example, if a node (which will we refer to as node &amp;ldquo;A&amp;rdquo;) is a dependency to node &amp;ldquo;B&amp;rdquo;, then node B&amp;rsquo;s health will be affected by node A&amp;rsquo;s health by virtue of it being dependent on node A.</description>
+      <description>What Is a Valid Node Name? At times, the system may emit a warning stating that you have provided an invalid node name. Here are the rules @ys uses to determine if a node name is valid:
+A node name must be at least one character A node name must be all lowercase. In most contexts, this is done for you automatically. More specifically, a node name must be within the range of characters a-z0-9_- A node name must be within the range of characters a-z A node name may not be a reserved name.</description>
     </item>
     <item>
       <title>@ys API Reference</title>
       <link>http://localhost:1313/help/library/ays-api-reference/</link>
       <pubDate>Wed, 12 Oct 2022 07:27:37 -0700</pubDate>
       <guid>http://localhost:1313/help/library/ays-api-reference/</guid>
-      <description>@ys API Reference ays - Functional Helpers The functional helpers allow you to define the inputs and outputs of a sensor function.&#xA;Please refer to How do I Configure a monitor sensor? for an example of all supported inputs and outputs.&#xA;ays.api - Sensor API ays.api.ping(host)&#xA;Ping host and receive a value in milliseconds.</description>
+      <description>@ys API Reference ays - Functional Helpers The functional helpers allow you to define the inputs and outputs of a sensor function.
+Please refer to How do I Configure a monitor sensor? for an example of all supported inputs and outputs.
+ays.api - Sensor API ays.api.ping(host)
+Ping host and receive a value in milliseconds.</description>
     </item>
     <item>
       <title>How Do I Query a Server</title>
       <link>http://localhost:1313/help/library/how-do-i-query-a-server/</link>
       <pubDate>Wed, 12 Oct 2022 07:21:13 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-query-a-server/</guid>
-      <description>How Do I Query a Server? This tutorial will show you how to query a HTTP server.&#xA;1 2 3 4 5 6 7 8 import ays @ays.param(str, &amp;#34;account_host&amp;#34;) @ays.returns(&amp;#34;num_accounts&amp;#34;) async def main(session, account_host): async with session.http.get(account_host) as resp: data = await resp.json() return data[&amp;#34;num_accounts&amp;#34;] </description>
+      <description>How Do I Query a Server? This tutorial will show you how to query a HTTP server.
+1 2 3 4 5 6 7 8 import ays @ays.param(str, &amp;#34;account_host&amp;#34;) @ays.returns(&amp;#34;num_accounts&amp;#34;) async def main(session, account_host): async with session.http.get(account_host) as resp: data = await resp.json() return data[&amp;#34;num_accounts&amp;#34;] </description>
     </item>
     <item>
       <title>How Do I Ping a Host</title>
       <link>http://localhost:1313/help/library/how-do-i-ping-a-host/</link>
       <pubDate>Wed, 12 Oct 2022 07:10:54 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-ping-a-host/</guid>
-      <description>How Do I Ping a Host? This tutorial will show you how to ping a server.&#xA;Please note: you can associate the Bithead template node com.bithead.template.ping to avoid writing this code.&#xA;1 2 3 4 5 6 7 8 9 10 import ays import time from ays.api import ping @ays.param(str, &amp;#34;host&amp;#34;) @ays.returns(&amp;#34;ms&amp;#34;) async def main(session, host): ms = await ping(host) return ms You will notice this sensor imports ping from the ays.</description>
+      <description>How Do I Ping a Host? This tutorial will show you how to ping a server.
+Please note: you can associate the Bithead template node com.bithead.template.ping to avoid writing this code.
+1 2 3 4 5 6 7 8 9 10 import ays import time from ays.api import ping @ays.param(str, &amp;#34;host&amp;#34;) @ays.returns(&amp;#34;ms&amp;#34;) async def main(session, host): ms = await ping(host) return ms You will notice this sensor imports ping from the ays.</description>
     </item>
     <item>
       <title>What Is a Template Node</title>
       <link>http://localhost:1313/help/library/what-is-a-template-node/</link>
       <pubDate>Wed, 12 Oct 2022 06:53:57 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-template-node/</guid>
-      <description>What Is a Template Node? A template node is designed to represent a type of system in your organization. You use them to monitor like systems in the same way.&#xA;Template nodes can also be used to build a library of utility functions. For example, Bithead has several utility template nodes such as com.bithead.template.ping and com.bithead.template.query. These provide common utilities that many other nodes may find useful. No coding required!</description>
+      <description>What Is a Template Node? A template node is designed to represent a type of system in your organization. You use them to monitor like systems in the same way.
+Template nodes can also be used to build a library of utility functions. For example, Bithead has several utility template nodes such as com.bithead.template.ping and com.bithead.template.query. These provide common utilities that many other nodes may find useful. No coding required!</description>
     </item>
     <item>
       <title>How Do I Configure a Monitor Sensor</title>
       <link>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</link>
       <pubDate>Tue, 11 Oct 2022 19:24:46 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</guid>
-      <description>How Do I Configure a Monitor Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).&#xA;The Composition of a Sensor Script This script is an example that shows you all of the available inputs and return types.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 # Import the `ays` library.</description>
+      <description>How Do I Write a Monitor Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
+The Composition of a Sensor Script This script is an example that shows you all of the available input and return types.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 # Import the `ays` library.</description>
     </item>
     <item>
       <title>How Do I Connect Slack</title>
       <link>http://localhost:1313/help/library/how-do-i-connect-slack/</link>
       <pubDate>Tue, 11 Oct 2022 18:49:25 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-connect-slack/</guid>
-      <description>How Do I Connect Slack? To integrate Slack, you must first install the Slack app in your organization&amp;rsquo;s Slack workspace.&#xA;To do this, open @ys, and navigate to the root node of your organization. (i.e. com.bithead)&#xA;Update the root node (Tap on Update mode and then tap the root node) Tap on &amp;ldquo;Organization Configuration&amp;rdquo; Tap on &amp;ldquo;Connect Slack&amp;rdquo; This will open Safari.&#xA;Install and provide permissions to the @ys app for your workspace.</description>
+      <description>How Do I Connect Slack? To integrate Slack, you must first install the Slack app in your organization&amp;rsquo;s Slack workspace.
+To do this, open @ys, and navigate to the root node of your organization. (i.e. com.bithead)
+Update the root node (Tap on Update mode and then tap the root node) Tap on &amp;ldquo;Organization Configuration&amp;rdquo; Tap on &amp;ldquo;Connect Slack&amp;rdquo; This will open Safari.
+Install and provide permissions to the @ys app for your workspace.</description>
     </item>
     <item>
       <title>How Do I Configure New Relic</title>
       <link>http://localhost:1313/help/library/how-do-i-configure-new-relic/</link>
       <pubDate>Wed, 21 Sep 2022 10:51:53 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-new-relic/</guid>
-      <description>How Do I Configure New Relic? Configuring New Relic requires three flows:&#xA;Associating the New Relic Entity GUID to an @ys Node Creating a New Relic webhook that sends alerts to the @ys webhook service Configuring policies to send condition alerts to the @ys webhook Associating New Relic Entity GUID to @ys Node Sign in to your New Relic account.&#xA;Go to &amp;ldquo;All Entities.&amp;rdquo;&#xA;On the entity you wish to track, such as an iOS app, tap the ellipses button at the right-most of the cell.</description>
+      <description>How Do I Configure New Relic? Configuring New Relic requires three flows:
+Associating the New Relic Entity GUID to an @ys Node Creating a New Relic webhook that sends alerts to the @ys webhook service Configuring policies to send condition alerts to the @ys webhook Associating New Relic Entity GUID to @ys Node Sign in to your New Relic account.
+Go to &amp;ldquo;All Entities.&amp;rdquo;
+On the entity you wish to track, such as an iOS app, tap the ellipses button at the right-most of the cell.</description>
     </item>
     <item>
       <title>How Do I Configure Embrace</title>
       <link>http://localhost:1313/help/library/how-do-i-configure-embrace/</link>
       <pubDate>Wed, 21 Sep 2022 10:51:45 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-embrace/</guid>
-      <description>How Do I Configure Embrace? Configuring Embrace requires three flows:&#xA;Associating the Embrace App ID to an @ys Node Creating an Embrace webhook that sends alerts to the @ys webhook service Configuring alerts to send to the @ys webhook Associate Embrace App ID to an @ys Node Sign in to your Embrace account.&#xA;Tap on the &amp;ldquo;(Switch) App&amp;rdquo; icon (currently the top-most button in the left tab bar on desktop). You should see a list of your apps that you are monitoring.</description>
+      <description>How Do I Configure Embrace? Configuring Embrace requires three flows:
+Associating the Embrace App ID to an @ys Node Creating an Embrace webhook that sends alerts to the @ys webhook service Configuring alerts to send to the @ys webhook Associate Embrace App ID to an @ys Node Sign in to your Embrace account.
+Tap on the &amp;ldquo;(Switch) App&amp;rdquo; icon (currently the top-most button in the left tab bar on desktop). You should see a list of your apps that you are monitoring.</description>
     </item>
     <item>
       <title>What Is External Alerting Config</title>
       <link>http://localhost:1313/help/library/what-is-external-alerting-config/</link>
       <pubDate>Wed, 21 Sep 2022 10:40:11 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-external-alerting-config/</guid>
-      <description>What is External Alerting Config? An external system, such as Embrace and NewRelic, may be configured to send alerts to @ys.&#xA;This is the easiest and fastest way to determine the health of your systems if you have already configured your apps, services, etc. with an external alerting system.&#xA;External alerting configuration are treated as &amp;ldquo;virtual monitors.&amp;rdquo; In other words, an external alert (e.g. a &amp;ldquo;Condition&amp;rdquo; in NewRelic or an &amp;ldquo;Alert&amp;rdquo; in Embrace) is similar to an @ys monitor.</description>
+      <description>What is External Alerting Config? An external system, such as Embrace and NewRelic, may be configured to send alerts to @ys.
+This is the easiest and fastest way to determine the health of your systems if you have already configured your apps, services, etc. with an external alerting system.
+External alerting configuration are treated as &amp;ldquo;virtual monitors.&amp;rdquo; In other words, an external alert (e.g. a &amp;ldquo;Condition&amp;rdquo; in NewRelic or an &amp;ldquo;Alert&amp;rdquo; in Embrace) is similar to an @ys monitor.</description>
     </item>
     <item>
       <title>What Is a Node Relationship?</title>
       <link>http://localhost:1313/help/library/what-is-a-node-relationship/</link>
       <pubDate>Tue, 17 May 2022 09:45:02 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-node-relationship/</guid>
-      <description>Node Relationships Node relationships are the logical groupings of parent and children nodes, and the dependent relationships between nodes.&#xA;Parent / child relationships are a typical Tree data structure.&#xA;Dependent relationships are defined by a node A depending on another node B for its operation. Imagine you are building a retail app that sells shoes. Your app may depend on a &amp;ldquo;Product&amp;rdquo; service, which gives you SKU level detail about your shoes, and a &amp;ldquo;Checkout&amp;rdquo; service which allows you to purchase a pair of shoes.</description>
+      <description>Node Relationships Node relationships are the logical groupings of parent and children nodes, and the dependent relationships between nodes.
+Parent / child relationships are a typical Tree data structure.
+Dependent relationships are defined by a node A depending on another node B for its operation. Imagine you are building a retail app that sells shoes. Your app may depend on a &amp;ldquo;Product&amp;rdquo; service, which gives you SKU level detail about your shoes, and a &amp;ldquo;Checkout&amp;rdquo; service which allows you to purchase a pair of shoes.</description>
     </item>
     <item>
-      <title>What Is a Measurement?</title>
+      <title>What Is a Monitor?</title>
       <link>http://localhost:1313/help/library/what-is-a-measurement/</link>
       <pubDate>Tue, 17 May 2022 08:54:49 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-measurement/</guid>
-      <description>Monitors A monitor is the combination of a sensor (data source) and threshold configuration.&#xA;Sensor A sensor can be&#xA;a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys The most common sensor type is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each time the script runs, @ys will query the data source and log the return value.</description>
+      <description>Monitors A monitor is the combination of a sensor (data source) and threshold configuration.
+Sensor A sensor can be
+a script that is executed at a configured interval (i.e. every 1 minute) a service that sends data points directly to @ys The most common sensor type is a (Python) script that queries an external data source such as New Relic, Datadog, etc. Each time the script runs, @ys will query the data source and log the return value.</description>
     </item>
     <item>
       <title>What Is Node Alerting Configuration?</title>
       <link>http://localhost:1313/help/library/what-is-node-alert-config/</link>
       <pubDate>Sun, 15 May 2022 06:54:27 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-node-alert-config/</guid>
-      <description>Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level.&amp;rdquo; For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a logging level lower than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.&#xA;This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level.</description>
+      <description>Node Alerting Configuration Alerting configuration works like a typical logging system where you can filter what messages are logged depending on the configured &amp;ldquo;level.&amp;rdquo; For example, in production you may configure your logging level to &amp;ldquo;Error.&amp;rdquo; Any logs emitted at a logging level lower than &amp;ldquo;Error&amp;rdquo; (Debug, Info, Warning) will not be emitted.
+This form provides a way to configure this &amp;ldquo;logging level.&amp;rdquo; Actions configured to Children and Dependencies will trigger if their health level breaches the respective Warning, Error, or Critical level.</description>
     </item>
     <item>
       <title>What Is a Runbook?</title>
       <link>http://localhost:1313/help/library/what-is-a-runbook/</link>
       <pubDate>Tue, 05 Apr 2022 06:18:26 -0700</pubDate>
       <guid>http://localhost:1313/help/library/what-is-a-runbook/</guid>
-      <description>Runbooks When an issue occurs with a service, it is important to know what steps can be taken to quickly resolve the issue. This is the purpose of a runbook. It is a &amp;ldquo;how-to&amp;rdquo; guide to help new, and experienced, operators to resolve common problems that a service may encounter.&#xA;For example, a runbook may contain instructions on how to restart a service, provide definitions and steps to resolve issues for a service&amp;rsquo;s error codes, etc.</description>
+      <description>Runbooks When an issue occurs with a service, it is important to know what steps can be taken to quickly resolve the issue. This is the purpose of a runbook. It is a &amp;ldquo;how-to&amp;rdquo; guide to help new, and experienced, operators to resolve common problems that a service may encounter.
+For example, a runbook may contain instructions on how to restart a service, provide definitions and steps to resolve issues for a service&amp;rsquo;s error codes, etc.</description>
     </item>
     <item>
       <title>Virtual Nodes</title>
       <link>http://localhost:1313/help/library/virtual-nodes/</link>
       <pubDate>Sun, 13 Mar 2022 22:06:59 -0700</pubDate>
       <guid>http://localhost:1313/help/library/virtual-nodes/</guid>
-      <description>Virtual Nodes Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.&#xA;Virtual nodes can be considered as ephemeral, although their life span depends on the context.&#xA;The status of every virtual node is queried at the same time.&#xA;The typical use case for virtual nodes is quickly assign the same monitor(s), to many nodes, and query the status of each node using a single query.</description>
+      <description>Virtual Nodes Virtual nodes are read-only nodes which inherit all properties from a template node. They may only be created, updated, or deleted from their parent node.
+Virtual nodes can be considered as ephemeral, although their life span depends on the context.
+The status of every virtual node is queried at the same time.
+The typical use case for virtual nodes is quickly assign the same monitor(s), to many nodes, and query the status of each node using a single query.</description>
     </item>
     <item>
       <title>Invalid Call Parameters</title>
       <link>http://localhost:1313/help/library/invalid-call-parameters/</link>
       <pubDate>Mon, 07 Mar 2022 13:07:21 -0800</pubDate>
       <guid>http://localhost:1313/help/library/invalid-call-parameters/</guid>
-      <description>Invalid Call Parameters This error occurs when one or more sensor parameters are not configured. Depending on the sensor parameter, it either needs to be a string with one or more characters or a numeric value for integer and double types.&#xA;Please configure the monitor sensor parameters with a value.&#xA;Below is an example of a string sensor parameter that is not configured. In this context, simply add a value with one or more characters.</description>
+      <description>Invalid Call Parameters This error occurs when one or more sensor parameters are not configured. Depending on the sensor parameter, it either needs to be a string with one or more characters or a numeric value for integer and double types.
+Please configure the monitor sensor parameters with a value.
+Below is an example of a string sensor parameter that is not configured. In this context, simply add a value with one or more characters.</description>
     </item>
     <item>
       <title>Read-only Threshold</title>
       <link>http://localhost:1313/help/library/read-only-threshold/</link>
       <pubDate>Mon, 07 Mar 2022 05:21:09 -0800</pubDate>
       <guid>http://localhost:1313/help/library/read-only-threshold/</guid>
-      <description>Read-only Threshold When a Threshold is set as &amp;ldquo;read-only&amp;rdquo;, all other nodes that template from this monitor will be unable to change the configuration values of threshold actions.&#xA;Imagine you have a group of services which must send all alerting traffic to a specific Slack channel. You would turn on &amp;ldquo;read-only&amp;rdquo; in this context. In essence, this creates a central configuration point for your alerting configuration.&#xA;If you are creating a monitor template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team.</description>
+      <description>Read-only Threshold When a Threshold is set as &amp;ldquo;read-only&amp;rdquo;, all other nodes that template from this monitor will be unable to change the configuration values of threshold actions.
+Imagine you have a group of services which must send all alerting traffic to a specific Slack channel. You would turn on &amp;ldquo;read-only&amp;rdquo; in this context. In essence, this creates a central configuration point for your alerting configuration.
+If you are creating a monitor template which will be used by many teams within (or outside) of your organization, the configuration values will most likely be different per team.</description>
     </item>
   </channel>
 </rss>

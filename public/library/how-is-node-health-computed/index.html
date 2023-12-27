@@ -17,16 +17,15 @@
 
 
 <meta name="author" content="olOwOlo" /><meta name="description" content="How is Node Health Computed? The Node Health Page is responsible for showing how the Node&amp;rsquo;s health is computed.
-The Overall Health is computed by averaging all object and alert health.
-Discrepency Messaging Do see you see a message like this?
-&amp;ldquo;3 not found, 2 extra samples&amp;rdquo; OR &amp;ldquo;3 not found&amp;rdquo; OR &amp;ldquo;2 extra samples&amp;rdquo; This indicates a discrepenancy between the object and its respective sample data. This should never happen." /><meta name="keywords" content="Hugo, theme, even" />
+The Overall Health is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.
+If a node&amp;rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.0 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="http://localhost:1313/help/library/how-is-node-health-computed/" />
@@ -56,7 +55,7 @@ Discrepency Messaging Do see you see a message like this?
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">@ your service</a>
+    <a href="/" class="logo">At Your Service</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -66,7 +65,7 @@ Discrepency Messaging Do see you see a message like this?
 </div>
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
-    <a href="/help/about">
+    <a href="/help/home">
         <li class="mobile-menu-item">Home</li>
       </a><a href="/help/library/">
         <li class="mobile-menu-item">Library</li>
@@ -81,7 +80,7 @@ Discrepency Messaging Do see you see a message like this?
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">@ your service</a>
+  <a href="/" class="logo">At Your Service</a>
 </div>
 
 
@@ -98,7 +97,7 @@ Discrepency Messaging Do see you see a message like this?
       </li>
       <li class="menu-item">•</li>
     <li class="menu-item">
-        <a class="menu-item-link" href="/help/about">Home</a>
+        <a class="menu-item-link" href="/help/home">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/help/library/">Library</a>
       </li>
@@ -114,8 +113,26 @@ Discrepency Messaging Do see you see a message like this?
   <div class="post-content">
     <h1 id="how-is-node-health-computed">How is Node Health Computed?</h1>
 <p>The <strong>Node Health Page</strong> is responsible for showing how the Node&rsquo;s health is computed.</p>
-<p>The <strong>Overall Health</strong> is computed by averaging all object and alert health.</p>
-<h2 id="discrepency-messaging">Discrepency Messaging</h2>
+<p>The <strong>Overall Health</strong> is determined by averaging all of the health values of its monitors, children, dependencies, and external system monitors.</p>
+<p>If a node&rsquo;s health changes, those changes will be propagated and affect the health of all of its dependents and parents. The algorithm walks backwards up the system graph until it reaches each organization node.</p>
+<p>For example, if a node (which will we refer to as node &ldquo;A&rdquo;) is a dependency to node &ldquo;B&rdquo;, then node B&rsquo;s health will be affected by node A&rsquo;s health by virtue of it being dependent on node A.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">Monitor</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">`</span><span class="n">Warning</span><span class="o">`</span><span class="w"> </span><span class="n">state</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">health</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="n">health</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">affects</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="nf">health</span><span class="w"> </span><span class="p">(</span><span class="n">because</span><span class="w"> </span><span class="n">it</span><span class="s1">&#39;s dependent of A)
+</span></span></span><span class="line"><span class="cl"><span class="s1">  ...
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -&gt; affects all other nodes which are a parent, or dependent, of node A and B up until the TLD nodes
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="discrepency-messaging">Discrepency Messaging</h2>
 <p>Do see you see a message like this?</p>
 <ul>
 <li>&ldquo;3 not found, 2 extra samples&rdquo;</li>
@@ -138,7 +155,9 @@ Discrepency Messaging Do see you see a message like this?
 
     <footer id="footer" class="footer">
       <div class="social-links">
+      <a href="mailto:bitheadrl@protonmail.com" class="iconfont icon-email" title="email"></a>
       <a href="https://twitter.com/bitheadRL" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/company/100273505/admin/feed/posts/" class="iconfont icon-linkedin" title="linkedin"></a>
   <a href="http://localhost:1313/help/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
@@ -157,7 +176,7 @@ Discrepency Messaging Do see you see a message like this?
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bithead LLC 2023</span>
   </span>
 </div>
 

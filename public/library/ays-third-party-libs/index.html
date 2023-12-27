@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>What Is a Node Relationship? - At Your Service Help Library</title>
+  <title>@ys 3rd Party Libraries - At Your Service Help Library</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,9 +16,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Node Relationships Node relationships are the logical groupings of parent and children nodes, and the dependent relationships between nodes.
-Parent / child relationships are a typical Tree data structure.
-Dependent relationships are defined by a node A depending on another node B for its operation. Imagine you are building a retail app that sells shoes. Your app may depend on a &amp;ldquo;Product&amp;rdquo; service, which gives you SKU level detail about your shoes, and a &amp;ldquo;Checkout&amp;rdquo; service which allows you to purchase a pair of shoes." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="@ys 3rd Party Libraries The following 3rd party libraries are installed on the main @ys server at api.bithead.io.
+aiohttp v3.8.5 An asynchronous HTTP client/server for asyncio and Python.
+Documentation
+An instance of the aiohttp.ClientSession can be accessed from session.http. Below is an example of how to query a website and derive the amount of time it takes to access the resource (this is also the com.bithead.template.query template monitor).
+Example Usage 1 2 3 4 5 6 7 8 9 10 11 import ays import time @ays." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -28,7 +30,7 @@ Dependent relationships are defined by a node A depending on another node B for 
 <meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/help/library/what-is-a-node-relationship/" />
+<link rel="canonical" href="http://localhost:1313/help/library/ays-third-party-libs/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/help/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/help/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/help/favicon-16x16.png">
@@ -111,34 +113,58 @@ Dependent relationships are defined by a node A depending on another node B for 
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <h1 id="node-relationships">Node Relationships</h1>
-<p>Node relationships are the logical groupings of parent and children nodes, and the dependent relationships between nodes.</p>
-<p>Parent / child relationships are a typical <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">Tree data structure</a>.</p>
-<p>Dependent relationships are defined by a node A depending on another node B for its operation. Imagine you are building a retail app that sells shoes. Your app may depend on a &ldquo;Product&rdquo; service, which gives you SKU level detail about your shoes, and a &ldquo;Checkout&rdquo; service which allows you to purchase a pair of shoes.</p>
-<p>The following graph shows the relationship between your &ldquo;iOS&rdquo; retail app and the services it depends on.</p>
+    <h1 id="ys-3rd-party-libraries">@ys 3rd Party Libraries</h1>
+<p>The following 3rd party libraries are installed on the main @ys server at <code>api.bithead.io</code>.</p>
+<h2 id="aiohttp-v385"><code>aiohttp</code> v3.8.5</h2>
+<p>An asynchronous HTTP client/server for <code>asyncio</code> and Python.</p>
+<p><a href="https://docs.aiohttp.org/en/stable/">Documentation</a></p>
+<p>An instance of the <code>aiohttp.ClientSession</code> can be accessed from <code>session.http</code>. Below is an example of how to query a website and derive the amount of time it takes to access the resource (this is also the <code>com.bithead.template.query</code> template monitor).</p>
+<h3 id="example-usage">Example Usage</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">        Acme Corp.
-</span></span><span class="line"><span class="cl">        /       \
-</span></span><span class="line"><span class="cl">    Mobile     Server
-</span></span><span class="line"><span class="cl">     /            \
-</span></span><span class="line"><span class="cl">   iOS  ------&gt;  Product
-</span></span><span class="line"><span class="cl">           |--&gt;  Checkout
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">ays</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Dependent      Dependencies
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;resource&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@ays.returns</span><span class="p">(</span><span class="s2">&#34;ms&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">resource</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ms</span> <span class="o">=</span> <span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">ms</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>&ldquo;Acme Corp.&rdquo; is the &ldquo;Organization Node.&rdquo; &ldquo;Mobile&rdquo; and &ldquo;Server&rdquo; are parent nodes that provide a logical grouping of apps and services. &ldquo;iOS&rdquo; is a child to &ldquo;Mobile&rdquo;, while &ldquo;Product&rdquo; and &ldquo;Checkout&rdquo; are children to &ldquo;Server.&rdquo; &ldquo;iOS&rdquo; depends on the &ldquo;Product&rdquo; and &ldquo;Checkout&rdquo; service.</p>
+</div><h2 id="asyncpg-v0290"><code>asyncpg</code> v0.29.0</h2>
+<p>A database interface designed specifically to work with PostgreSQL and the <code>asyncio</code> library.</p>
+<p><a href="https://magicstack.github.io/asyncpg/current/">Documentation</a></p>
+<p><strong>NOTE:</strong> Example usage coming soon.</p>
+<h2 id="beautifulsoup4-v4111"><code>beautifulsoup4</code> v4.11.1</h2>
+<p>Beautiful Soup is a library that makes it easy to scrape information from web pages.</p>
+<p><a href="https://pypi.org/project/beautifulsoup4/">Documentation</a></p>
+<h2 id="grpcio-v1593"><code>grpcio</code> v1.59.3</h2>
+<p>An HTTP/2-based RPC framework.</p>
+<p><a href="https://pypi.org/project/grpcio/">Documentation</a></p>
+<p><strong>TODO:</strong> Example usage coming soon.</p>
+<h2 id="protobuf_to_dict"><code>protobuf_to_dict</code></h2>
+<p>Transforms gRPC models into Python dictionaries.</p>
+<p><a href="https://github.com/PeqNP/protobuf-to-dict">Documentation</a></p>
+<h2 id="pyyaml-v60"><code>PyYaml</code> v6.0</h2>
+<p>Serialize Python dictionaries to/from YAML.</p>
+<p><a href="https://pypi.org/project/PyYAML/">Documentation</a></p>
 
   </div>
 </article>

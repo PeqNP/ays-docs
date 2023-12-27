@@ -3,20 +3,27 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2023-03-23T15:18:18-07:00</lastmod>
+    <lastmod>2023-12-27T07:53:24-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/help/library/contact-ays-representative/</loc>
-    <lastmod>2023-03-23T15:18:18-07:00</lastmod>
+    <loc>http://localhost:1313/help/library/ays-third-party-libs/</loc>
+    <lastmod>2023-12-27T07:53:24-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
+    <lastmod>2023-12-27T07:53:24-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/contact-ays-representative/</loc>
     <lastmod>2023-03-23T15:18:18-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -53,13 +60,6 @@
   <url>
     <loc>http://localhost:1313/help/library/what-is-a-valid-node-name/</loc>
     <lastmod>2022-11-04T14:03:49-07:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/help/library/how-is-node-health-determined/</loc>
-    <lastmod>2022-10-12T08:12:59-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/help/about/</loc>
+    <loc>http://localhost:1313/help/home/</loc>
     <lastmod>2022-01-24T16:30:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
