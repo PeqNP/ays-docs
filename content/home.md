@@ -12,11 +12,13 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 
 - [Introduction to At Your Service](https://www.youtube.com/watch?v=zmF8SuhVe_I)
 
-### Tutorials
+### Video Tutorials
 
 - [The System Graph](https://www.youtube.com/watch?v=3VawuzUcEJU)
-
-**NOTE:** More videos will be linked as they are finished.
+- [Create, Update, & Move Nodes](https://youtu.be/4gYpX-IBxkM)
+- [Link Dependencies](https://youtu.be/uLsfU88qp_I)
+- [Navigation](https://youtu.be/KSFvgU5-ff4)
+- [Configuring Monitors](https://youtu.be/Wqi82FCabHc)
 
 ### Supplementary
 
