@@ -18,7 +18,7 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 - [Create, Update, & Move Nodes](https://youtu.be/4gYpX-IBxkM)
 - [Link Dependencies](https://youtu.be/uLsfU88qp_I)
 - [Navigation](https://youtu.be/KSFvgU5-ff4)
-- [Configuring Monitors](https://youtu.be/Wqi82FCabHc)
+- [Configuring Monitors](https://youtu.be/1xw5lgAEAP8)
 
 ### Supplementary
 
