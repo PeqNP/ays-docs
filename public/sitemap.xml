@@ -3,20 +3,27 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2023-12-27T07:53:24-08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/help/library/ays-third-party-libs/</loc>
-    <lastmod>2023-12-27T07:53:24-08:00</lastmod>
+    <lastmod>2024-01-09T16:53:34-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
+    <lastmod>2024-01-09T16:53:34-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-are-software-keys/</loc>
+    <lastmod>2024-01-09T16:53:34-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/ays-third-party-libs/</loc>
     <lastmod>2023-12-27T07:53:24-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

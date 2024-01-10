@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Bithead LLC 2023</copyright>
-    <lastBuildDate>Wed, 27 Dec 2023 07:53:24 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2024 16:53:34 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Are Software Keys</title>
+      <link>http://localhost:1313/help/library/what-are-software-keys/</link>
+      <pubDate>Tue, 09 Jan 2024 16:53:34 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/what-are-software-keys/</guid>
+      <description>What are Software Keys? Many services, machines, etc. may require credentials in order to access the resource. For example, if you wish to query a NewRelic REST API, you must provide an API API key.&#xA;Types of Software Keys There are two types of software keys:&#xA;Node keys Global keys Node keys are software keys associated to a node. Software keys may be inherited so that children can access a parent&amp;rsquo;s keys.</description>
+    </item>
     <item>
       <title>@ys 3rd Party Libraries</title>
       <link>http://localhost:1313/help/library/ays-third-party-libs/</link>
