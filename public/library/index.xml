@@ -98,7 +98,7 @@
       <link>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</link>
       <pubDate>Tue, 11 Oct 2022 19:24:46 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/</guid>
-      <description>How Do I Write a Monitor Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).&#xA;The Composition of a Sensor Script This script is an example that shows you all of the available input and return types.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 # Import the `ays` library.</description>
+      <description>How Do I Write a Monitor Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).&#xA;The Composition of a Sensor Script This script is an example that shows you all of the available input and return types.&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 # Import the `ays` library.</description>
     </item>
     <item>
       <title>How Do I Connect Slack</title>

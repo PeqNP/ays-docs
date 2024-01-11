@@ -30,8 +30,9 @@ import ays
 # that "sibling" monitors could choose from.
 # @ays.returns(["num_requests", "ms"])
 async def main(session, http_path, status, enabled, percent):
-    """ The `session` variable is always the first variable passed to your sensor.
-    `@ays.param`s follow after `session` in the order they were defined. """
+    """ The `session` variable is an `aiohttp.ClientSession` and is always
+    the first variable passed to your sensor. `@ays.param`s follow after
+    `session` in the order they were defined. """
     # Example of how to query a remote service that returns JSON
     async with session.http.get(http_path) as resp:
         data = await resp.json()

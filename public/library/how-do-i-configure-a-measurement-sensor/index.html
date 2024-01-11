@@ -18,14 +18,14 @@
 
 <meta name="author" content="olOwOlo" /><meta name="description" content="How Do I Write a Monitor Sensor? A script sensor allows you to run a script (such as Python) at a given interval (every 15 seconds, 1 minute, etc.).
 The Composition of a Sensor Script This script is an example that shows you all of the available input and return types.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 # Import the `ays` library." /><meta name="keywords" content="Hugo, theme, even" />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 # Import the `ays` library." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.121.1 with theme even" />
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
 
 
 <link rel="canonical" href="http://localhost:1313/help/library/how-do-i-configure-a-measurement-sensor/" />
@@ -141,6 +141,7 @@ The Composition of a Sensor Script This script is an example that shows you all 
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
+</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Import the `ays` library. You are not restricted as to which libraries</span>
@@ -160,8 +161,9 @@ The Composition of a Sensor Script This script is an example that shows you all 
 </span></span><span class="line"><span class="cl"><span class="c1"># that &#34;sibling&#34; monitors could choose from.</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># @ays.returns([&#34;num_requests&#34;, &#34;ms&#34;])</span>
 </span></span><span class="line"><span class="cl"><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">http_path</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">enabled</span><span class="p">,</span> <span class="n">percent</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34; The `session` variable is always the first variable passed to your sensor.
-</span></span></span><span class="line"><span class="cl"><span class="s2">    `@ays.param`s follow after `session` in the order they were defined. &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34; The `session` variable is an `aiohttp.ClientSession` and is always
+</span></span></span><span class="line"><span class="cl"><span class="s2">    the first variable passed to your sensor. `@ays.param`s follow after
+</span></span></span><span class="line"><span class="cl"><span class="s2">    `session` in the order they were defined. &#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># Example of how to query a remote service that returns JSON</span>
 </span></span><span class="line"><span class="cl">    <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">http</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">http_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
