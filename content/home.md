@@ -19,6 +19,8 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 - [Link Dependencies](https://youtu.be/uLsfU88qp_I)
 - [Navigation](https://youtu.be/KSFvgU5-ff4)
 - [Configuring Monitors](https://youtu.be/1xw5lgAEAP8)
+- [Software keys](https://youtu.be/vtgVAHT4kqA)
+- [Global Software Keys](https://youtu.be/7-Is4LPHWXg)
 
 ### Supplementary
 

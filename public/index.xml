@@ -182,7 +182,7 @@
       <link>http://localhost:1313/help/home/</link>
       <pubDate>Mon, 24 Jan 2022 16:30:11 -0800</pubDate>
       <guid>http://localhost:1313/help/home/</guid>
-      <description>Help Library Do you need help? Click here to see our contact options.&#xA;@ys Basics Introduction to At Your Service Video Tutorials The System Graph Create, Update, &amp;amp; Move Nodes Link Dependencies Navigation Configuring Monitors Supplementary API Reference - Utility libraries for sensor scripts 3rd Party Libraries - Supported 3rd party libraries, and usage, installed on @ys servers. Monitors &amp;amp; Sensors What is a monitor How do I write a monitor sensor How do I query a server How do I ping a host Invalid call parameters App-specific Contextual Help These articles are contextual to the app.</description>
+      <description>Help Library Do you need help? Click here to see our contact options.&#xA;@ys Basics Introduction to At Your Service Video Tutorials The System Graph Create, Update, &amp;amp; Move Nodes Link Dependencies Navigation Configuring Monitors Software keys Global Software Keys Supplementary API Reference - Utility libraries for sensor scripts 3rd Party Libraries - Supported 3rd party libraries, and usage, installed on @ys servers. Monitors &amp;amp; Sensors What is a monitor How do I write a monitor sensor How do I query a server How do I ping a host Invalid call parameters App-specific Contextual Help These articles are contextual to the app.</description>
     </item>
   </channel>
 </rss>
