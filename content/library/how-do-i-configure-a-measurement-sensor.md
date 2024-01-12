@@ -30,9 +30,11 @@ import ays
 # that "sibling" monitors could choose from.
 # @ays.returns(["num_requests", "ms"])
 async def main(session, http_path, status, enabled, percent):
-    """ The `session` variable is an `aiohttp.ClientSession` and is always
-    the first variable passed to your sensor. `@ays.param`s follow after
-    `session` in the order they were defined. """
+    """ The `session` variable is always the first variable passed to your
+    sensor. `@ays.param`s follow after `session` in the order they were
+    defined. """
+    # This will log the @ys app console
+    session.log(f"Making call to http_path ({http_path})")
     # Example of how to query a remote service that returns JSON
     async with session.http.get(http_path) as resp:
         data = await resp.json()
@@ -44,11 +46,23 @@ async def main(session, http_path, status, enabled, percent):
 
 **You must `Run` your script** if any parameter (`@ays.param`) or return (`@ays.returns`) value changes! This will almost always be true when writing a new sensor. The process of transforming your inputs and outputs, to an object that the app can understand, is done by the server. *You will lose changes to your work if you fail to do this.*
 
+### The `session` variable
+
+The `session` variable provides a way to interact with the environment. This includes making network requests, logging (for debugging), etc.
+
+```
+class ays.Session(object):
+    # Make HTTP requests
+    http: aiohttp.ClientSession
+    # Log a message to the console
+    log: (message: str) -> Void
+```
+
 ## Parameters and Inputs
 
 After the sensor script is saved, you will see the "Parameters" and "Return value" fields reflect the inputs and outputs of the script on the sensor page.
 
-You can now configure the parameters to accept a constant value *or* a Node property value.
+You can now configure the parameters with a constant value *or* a Node property value.
 
 To learn how to create and configure a node property please refer to [What Is a Node Property?]({{< relref "library/what-is-a-node-property.md" >}}).
 
