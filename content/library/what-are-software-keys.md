@@ -27,7 +27,7 @@ If a global key is required, but not configured, you will see an error message i
 
 ### Encryption
 
-Software keys are _not_ encrypted. If they are hashed, there is no way to decrypt and provide the respective key to the external resource. There are plans to use PBES2 (Password Based Encryption Scheme 2) in the future. We do not recommend storing credentials to critical servers in **@ys**.
+Software keys are _not_ encrypted. If they are hashed, there is no way to decrypt and provide the respective key to the external resource. There are plans to use PBES2 (Password Based Encryption Scheme 2) or SQLCipher in the near future. We do not recommend storing credentials to critical servers in **@ys**.
 
 Possible work-arounds:
 - Use a JWT that represents a signed in user. Rotate the keys as necessary.
