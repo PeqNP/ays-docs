@@ -25,7 +25,8 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 ### Supplementary
 
 - [API Reference]({{< relref "library/ays-api-reference.md" >}}) - Utility libraries for sensor scripts
-- [3rd Party Libraries]({{< relref "library/ays-third-party-libs.md" >}}) - Supported 3rd party libraries, and usage, installed on @ys servers.
+- [3rd Party Libraries]({{< relref "library/ays-third-party-libs.md" >}}) - Supported 3rd party libraries, and usage, installed on @ys servers
+- [Node API Reference]({{< relref "library/what-is-a-node-api.md" >}}) - Connect and configure services and machines remotely
 
 ## Monitors & Sensors
 
