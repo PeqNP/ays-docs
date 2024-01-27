@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Bithead LLC 2023</copyright>
-    <lastBuildDate>Tue, 09 Jan 2024 16:53:34 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2024 14:59:42 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is a Node Api</title>
+      <link>http://localhost:1313/help/library/what-is-a-node-api/</link>
+      <pubDate>Fri, 26 Jan 2024 14:59:42 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/what-is-a-node-api/</guid>
+      <description>What is a Node API? A node API is a collection of functions, that belong to a node, that can be executed from within @ys.&#xA;These functions provide a way to interact with the respective service or machine that the node represents. Some examples of what a node API can be used for:&#xA;Perform administrative functions on a service or machine. e.g. restart a service or machine. Send firmware updates to hundreds of IoT devices Send configuration parameters to hundreds of IoT devices The Anatomy of a Node API function Node API functions use the asyncio library for asynchronous operations.</description>
+    </item>
     <item>
       <title>What Are Software Keys</title>
       <link>http://localhost:1313/help/library/what-are-software-keys/</link>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>What Is a Node Api - At Your Service Help Library</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="What is a Node API? A node API is a collection of functions, that belong to a node, that can be executed from within @ys.
+These functions provide a way to interact with the respective service or machine that the node represents. Some examples of what a node API can be used for:
+Perform administrative functions on a service or machine. e.g. restart a service or machine. Send firmware updates to hundreds of IoT devices Send configuration parameters to hundreds of IoT devices The Anatomy of a Node API function Node API functions use the asyncio library for asynchronous operations." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.121.2 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/help/library/what-is-a-node-api/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/help/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/help/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/help/favicon-16x16.png">
+<link rel="manifest" href="/help/manifest.json">
+<link rel="mask-icon" href="/help/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/help/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">At Your Service</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/help/home">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/help/library/">
+        <li class="mobile-menu-item">Library</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">At Your Service</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+      <li class="menu-item">
+          <a class="menu-item-link" href="mailto:bitheadrl@protonmail.com">Email Us</a>
+      </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="tel:12533291280">Call Us</a>
+      </li>
+      <li class="menu-item">•</li>
+    <li class="menu-item">
+        <a class="menu-item-link" href="/help/home">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/help/library/">Library</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h1 id="what-is-a-node-api">What is a Node API?</h1>
+<p>A node API is a collection of functions, that belong to a node, that can be executed from within <strong>@ys</strong>.</p>
+<p>These functions provide a way to interact with the respective service or machine that the node represents. Some examples of what a node API can be used for:</p>
+<ul>
+<li>Perform administrative functions on a service or machine. e.g. restart a service or machine.</li>
+<li>Send firmware updates to hundreds of IoT devices</li>
+<li>Send configuration parameters to hundreds of IoT devices</li>
+</ul>
+<h2 id="the-anatomy-of-a-node-api-function">The Anatomy of a Node API function</h2>
+<p>Node API functions use the <code>asyncio</code> library for asynchronous operations.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># The `api` library provides the decorators and APIs that drive Node APIs</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">api</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This is a type of data source. It provides a list of firmware versions that a</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># user will select from before executing the API.</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">list_options</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;1.0.0 b43&#34;</span><span class="p">,</span> <span class="s2">&#34;https://www.example.com/fw/1_0_0b43.pkg&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;1.2.3 b150&#34;</span><span class="p">,</span> <span class="s2">&#34;https://www.example.com/fw/1_2_3b150.pkg&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define the parameter(s) that can be sent to your function. Parameter types</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># can be an `int`, `str`, `float`, or `bool`.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Data source options are always a `str` type.</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">list_options</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># The `name` parameter is a (required) displayable name for your function.</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@name</span><span class="p">(</span><span class="s2">&#34;Upload firmware&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">aysnc</span> <span class="k">def</span> <span class="nf">upload_firmware</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Send a log to the client</span>
+</span></span><span class="line"><span class="cl">    <span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;The value of version (</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Returns the `Node` this API belongs to. For example, if this API belongs</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># to the `com.example.web` node, this will return a `Node` model that</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># has all properties of the `com.example.web` node.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">node</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_node</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Returns all children nodes of this node. Useful when a child represents</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># a service or machine you want to send commands to.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">children</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_children</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">num_children</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">children</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Send a status message to client. The status message allows you to inform the</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># client the current job #, the total number of jobs, and the description of</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># the job being performed.</span>
+</span></span><span class="line"><span class="cl">    <span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">status</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_children</span><span class="p">,</span> <span class="s2">&#34;Initializing firmware updates&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">child</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">children</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Returns a property associated to the node.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ip_address</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s2">&#34;ip_address&#34;</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">await</span> <span class="n">session</span><span class="o">.</span><span class="n">status</span><span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_children</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&#34;Sending firmware update to: </span><span class="si">{</span><span class="n">ip_address</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># TODO: Send the update here</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Like `get_children`, you can also query for any grand child that belongs</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># to this node.</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grand_children</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_children_for</span><span class="p">(</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="api-apisession">API: <code>api.Session</code></h2>
+<p>The <code>api.Session</code> provides a way to send logs, statuses, and get information about nodes within the current context.</p>
+<p><code>log(message: str) -&gt; None</code> - Send a log message to the client</p>
+<p><code>status(current_job: int, total_jobs: int, message: str) -&gt; None</code> - Send a status update to the client</p>
+<p><code>get_children() -&gt; [node_pb2.Node]</code> - Returns a list of children nodes that belong to the parent node</p>
+<p><code>get_children_for(node_id: str) -&gt; [node_pb2.Node]</code> - Returns children that belong to the node</p>
+<h2 id="api-param-decorator">API: <code>@param</code> Decorator</h2>
+<p>The <code>@param</code> decorator defines a parameter that can be sent to the respective function. A parameter can also be configured to be auto-populated with the following values:</p>
+<ul>
+<li>Software key</li>
+<li>Global software key</li>
+<li>A data source which provides options to choose from</li>
+</ul>
+<h3 id="software-key">Software Key</h3>
+<p>To configure a parameter to use a software key, please do the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;software_key&#34;</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>key</code> references the ID of the software key. To find the respective software key ID, the IDE provides a <code>Keys</code> menu option. Tap the <code>Keys</code> menu option to list all available software keys. Find the software key&rsquo;s ID from the list and set the value to the <code>key</code> parameter.</p>
+<h3 id="global-software-key">Global Software Key</h3>
+<p>To configure a parameter to use a global software key, please do the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;software_key&#34;</span><span class="p">,</span> <span class="n">global_key</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The <code>global_key</code> value of <code>10</code> references the ID of a global software key. To find the respective global software key, the IDE provides a <code>Keys</code> menu option. Tap the <code>Keys</code> menu option to list all available global software keys. Find the global software key&rsquo;s ID from the list and set the value to the <code>global_key</code> parameter.</p>
+<h3 id="data-source">Data Source</h3>
+<p>A data source allows you to query a (remote) data source for a list of name / value pairs that will be presented to the user as a drop-down of options. A data source can currently be:</p>
+<ul>
+<li>A reference to a Python function</li>
+<li>Download a CSV, JSON, or YAML file via HTTP</li>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+</ul>
+<p><strong>Configure a Python function reference</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">list_options</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;1.0.0 b43&#34;</span><span class="p">,</span> <span class="s2">&#34;https://www.example.com/fw/1_0_0b43.pkg&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;1.2.3 b150&#34;</span><span class="p">,</span> <span class="s2">&#34;https://www.example.com/fw/1_2_3b150.pkg&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">list_options</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The first value of the tuple provides the displayable value of the option (the &ldquo;name&rdquo;) a user will see in a drop-down. The second value is the value that is passed to the function when the option is selected.</p>
+<p><strong>Configure a MySQL database</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;192.168.0.1&#34;</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Alternatively, you can inject software keys inside data source parameters. Here is an example showing how to inject software key, with a value of <code>2</code>, as the password for the database.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;192.168.0.1&#34;</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">{key:2}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Specifically, this will replace <code>{key:2}</code> with the respective software key value.</p>
+<p><strong>Configure a PostgreSQL database</strong></p>
+<p>This works the same as MySQL. Replace <code>api.MySQLSource</code> with <code>api.PostgreSQLSource</code>.</p>
+<p><strong>Configure a HTTP data source</strong></p>
+<p>The example below will download and parse a CSV file.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">HTTPSource</span><span class="p">(</span><span class="s2">&#34;https://www.example.com/my_options.csv&#34;</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="n">api</span><span class="o">.</span><span class="n">CSVParser</span><span class="p">()))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="parser-csvparser">Parser: <code>CSVParser</code></h4>
+<p>There must be only two columns. The first column is the displayable value. The second column the value.</p>
+<h4 id="parser-jsonparser">Parser: <code>JSONParser</code></h4>
+<p>The payload must be an array of dictionaries where each dictionary contains the keys <code>name</code> and <code>value</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0 b43&#34;</span><span class="p">,</span> <span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.example.com/fw/1_0_0b43.pkg&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;1.2.3 b150&#34;</span><span class="p">,</span> <span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.example.com/fw/1_2_3b150.pkg&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="parser-yamlparser">Parser: <code>YAMLParser</code></h4>
+<p>The payload must be an array of dictionaries where each dictionary contains the keys <code>name</code> and <code>value</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="m">1.0.0</span><span class="w"> </span><span class="l">b43</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l">https://www.example.com/fw/1_0_0b43.pkg</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="m">1.2.3</span><span class="w"> </span><span class="l">b150</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l">https://www.example.com/fw/1_2_3b150.pkg</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bitheadrl@protonmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/bitheadRL" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/company/100273505/admin/feed/posts/" class="iconfont icon-linkedin" title="linkedin"></a>
+  <a href="http://localhost:1313/help/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bithead LLC 2023</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/help/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
