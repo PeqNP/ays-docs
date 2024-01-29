@@ -127,16 +127,32 @@ The first value of the tuple provides the displayable value of the option (the "
 **Configure a MySQL database**
 
 ```python
-@param(str, "version", api.MySQLSource("192.168.0.1", "my_db", "username", "password", "table", "name_col", "value_col"))
+@param(str, "version", api.MySQLSource("localhost", 3306, "my_db", "table", "name_col", "value_col", "username", "password"))
 ```
 
 Alternatively, you can inject software keys inside data source parameters. Here is an example showing how to inject software key, with a value of `2`, as the password for the database.
 
 ```python
-@param(str, "version", api.MySQLSource("192.168.0.1", "my_db", "username", "{key:2}", "table", "name_col", "value_col"))
+@param(str, "version", api.MySQLSource("localhost", 3306, "my_db", "table", "name_col", "value_col", "username", "{key:2}"))
 ```
 
 Specifically, this will replace `{key:2}` with the respective software key value.
+
+You may also inject global software keys inside data source parameters:
+
+```python
+@param(str, "version", api.MySQLSource("localhost", 3306, "my_db", "table", "name_col", "value_col", "username", "{global_key:5}"))
+```
+
+This will replace `{global_key:5}` with the respective global software key value.
+
+Lastly, node properties may also be injected in parameters:
+
+```python
+@param(str, "version", api.MySQLSource("{property:my_host}", 3306, "my_db", "table", "name_col", "value_col", "username", "my_pass"))
+```
+
+Keys and properties may be injected in every parameter, including `port`.
 
 **Configure a PostgreSQL database**
 
@@ -152,7 +168,7 @@ The example below will download and parse a CSV file.
 
 #### Parser: `CSVParser`
 
-There must be only two columns. The first column is the displayable value. The second column the value.
+There must be only two columns. The first column is the displayable value (becomes the option's `name`). The second column the value (becomes the option's `value`).
 
 #### Parser: `JSONParser`
 

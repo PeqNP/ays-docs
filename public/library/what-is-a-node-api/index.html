@@ -25,7 +25,7 @@ Perform administrative functions on a service or machine. e.g. restart a service
 
 
 
-<meta name="generator" content="Hugo 0.121.2 with theme even" />
+<meta name="generator" content="Hugo 0.122.0 with theme even" />
 
 
 <link rel="canonical" href="http://localhost:1313/help/library/what-is-a-node-api/" />
@@ -278,7 +278,7 @@ Perform administrative functions on a service or machine. e.g. restart a service
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;192.168.0.1&#34;</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span> <span class="mi">3306</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span><span class="p">))</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Alternatively, you can inject software keys inside data source parameters. Here is an example showing how to inject software key, with a value of <code>2</code>, as the password for the database.</p>
@@ -287,10 +287,30 @@ Perform administrative functions on a service or machine. e.g. restart a service
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;192.168.0.1&#34;</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">{key:2}</span><span class="s2">&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span> <span class="mi">3306</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">{key:2}</span><span class="s2">&#34;</span><span class="p">))</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>Specifically, this will replace <code>{key:2}</code> with the respective software key value.</p>
+<p>You may also inject global software keys inside data source parameters:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;localhost&#34;</span><span class="p">,</span> <span class="mi">3306</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">{global_key:5}</span><span class="s2">&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will replace <code>{global_key:5}</code> with the respective global software key value.</p>
+<p>Lastly, node properties may also be injected in parameters:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@param</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="n">api</span><span class="o">.</span><span class="n">MySQLSource</span><span class="p">(</span><span class="s2">&#34;{property:my_host}&#34;</span><span class="p">,</span> <span class="mi">3306</span><span class="p">,</span> <span class="s2">&#34;my_db&#34;</span><span class="p">,</span> <span class="s2">&#34;table&#34;</span><span class="p">,</span> <span class="s2">&#34;name_col&#34;</span><span class="p">,</span> <span class="s2">&#34;value_col&#34;</span><span class="p">,</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span> <span class="s2">&#34;my_pass&#34;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Keys and properties may be injected in every parameter, including <code>port</code>.</p>
 <p><strong>Configure a PostgreSQL database</strong></p>
 <p>This works the same as MySQL. Replace <code>api.MySQLSource</code> with <code>api.PostgreSQLSource</code>.</p>
 <p><strong>Configure a HTTP data source</strong></p>
@@ -304,7 +324,7 @@ Perform administrative functions on a service or machine. e.g. restart a service
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="parser-csvparser">Parser: <code>CSVParser</code></h4>
-<p>There must be only two columns. The first column is the displayable value. The second column the value.</p>
+<p>There must be only two columns. The first column is the displayable value (becomes the option&rsquo;s <code>name</code>). The second column the value (becomes the option&rsquo;s <code>value</code>).</p>
 <h4 id="parser-jsonparser">Parser: <code>JSONParser</code></h4>
 <p>The payload must be an array of dictionaries where each dictionary contains the keys <code>name</code> and <code>value</code>.</p>
 <div class="highlight"><div class="chroma">
