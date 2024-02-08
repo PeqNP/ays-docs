@@ -12,7 +12,7 @@ Agents allow any system to self-report its status. Some common examples of possi
 - 3rd party webhooks, such as a NewRelic alert webhook
 - Services that may be brought up or down depending on demand
 
-An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template. This makes it easy to configure, and manage, any sized group of nodes to behave in the same way.
+An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.
 
 If you know what you need, please visit the API docs for the `/agent/` endpoint at the [External Message Ingestion Service Documentation](https://api.bithead.io:9443/docs/) page.
 
