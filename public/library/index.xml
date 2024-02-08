@@ -77,7 +77,7 @@
       <link>http://localhost:1313/help/library/what-is-an-agent/</link>
       <pubDate>Thu, 08 Feb 2024 07:46:04 -0800</pubDate>
       <guid>http://localhost:1313/help/library/what-is-an-agent/</guid>
-      <description>Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:&#xA;IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node.</description>
+      <description>Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:&#xA;IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template.</description>
     </item>
     <item>
       <title>What Is a Node Api</title>
