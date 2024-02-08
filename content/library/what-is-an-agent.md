@@ -12,9 +12,9 @@ Agents allow any system to self-report its status. Some common examples of possi
 - 3rd party webhooks, such as a NewRelic alert webhook
 - Services that may be brought up or down depending on demand
 
-An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node. This makes it simple to configure any sized group of nodes to behave in the same way. One template use case is providing a group of IoT devices to manage a grow operation for a specific type of plant. Another use case is configuring 3rd party webhooks to all report to the same Slack channel.
+An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node. This makes it simple to configure any sized group of nodes to behave in the same way.
 
-If you're familiar with what you need, you may visit the API docs for the `/agent/` endpoint at the [External Services Documentation](https://api.bithead.io:9443/docs) page.
+If you know what you need, please visit the API docs for the `/agent/` endpoint at the [External Services Documentation](https://api.bithead.io:9443/docs) page.
 
 ## Examples
 
@@ -27,7 +27,7 @@ You can jump right in with these examples. What are you trying to do?
   - Scalable systems that are built up / torn down depending on need
 - [Report a single value]({{< relref "library/agents-single-value.md" >}}), creating a single monitor
   - IoT sensors that report a single value (humidity, water level, light level, etc.)
-- [Report multiple values]({{< relref "library/agents-multiple-values.md" >}}), creating multiple monitors for each value **NOTE:** This is referred to as an "elder" monitor in **ays**.
+- [Report multiple values]({{< relref "library/agents-multiple-values.md" >}}), creating multiple monitors for each value
   - Proxies that report number of requests, number of errors, etc.
   - Machine status such as CPU, HDD, RAM, and network utilization
 - [Report uptime status]({{< relref "library/agents-status-value.md" >}}), create a monitor that represents the uptime status of a system
@@ -50,7 +50,7 @@ An agent may relate:
 - Directly to a parent node as a new monitor. This is ideal when you want to group many (3rd party) services together on a single node.
 - As a child to the parent. This is ideal for grouping IoT devices, machines, and possibly services by a physical region, building, or floor.
 
-There is also a special type of relationship that allows more than one agent to relate to the same child node as different monitors. One use case for this is grouping different sensors in a single grow bed. This would allow you to see all monitors (humidity, water level, light, etc.), for a given bed, rather than having a node for each sensor. Please refer to the child relationship documentation for more information.
+A special type of relationship exists which allows more than one agent to relate to the same child node as different monitors. Please refer to the child relationship documentation for more information.
 
 How you group nodes is up to you. **ays** gives you the power to manage your hierarchy in the way that best suits your needs.
 
@@ -65,19 +65,19 @@ There are four ways to send status to **ays** from your agent.
 
 - Provide a single value. e.g. A sensor value for humidity, light, or water level
 - Provide multiple values. e.g. If monitoring a server, you may provide CPU, HDD, RAM, and Network in the same status payload.
-- Provide a status. e.g. 3rd party analytics provider, such as NewRelic, can send a signal (via a webhook) that a threshold was breached. It can also send the recovery signal.
+- Provide a health status. e.g. 3rd party analytics provider, such as NewRelic, can send a signal (via a webhook) that a threshold was breached. It can also send the recovery signal.
 - No value or status. When coupled with heartbeat configuration, this helps you know if the system is online. Obviously, this doesn't provide any additional insight into the state of the system.
 
 I want to configure an agent to report:
 
 - [Single value]({{< relref "library/agents-single-value.md" >}})
 - [Multiple values]({{< relref "library/agents-multiple-values.md" >}})
-- [Status]({{< relref "library/agents-status-value.md" >}})
+- [Health Status]({{< relref "library/agents-status-value.md" >}})
 - Nothing. Simply omit any value or status from the payload.
 
 ### Heartbeat
 
-The heartbeat allows you to configure your agent to alert if no signal has been received from the agent within a given timeout.
+The heartbeat configuration allows you to configure your agent to alert if no signal has been received from the agent within a given timeout.
 
 - [Configure Agent Heartbeat]({{< relref "library/agents-heartbeat.md" >}})
 
@@ -85,7 +85,7 @@ The heartbeat allows you to configure your agent to alert if no signal has been 
 
 Properties are an important way to track state information on an agent. For example, an IoT device may report its IP address, firmware version, or any other configuration as a node property.
 
-Properties may also be used by the API node to target agent systems. For example, if the IP address of an IoT is provided, the API node may send a request to that device to update its firmware.
+Properties may also be used by the Node API to target agent systems. For example, if the IP address of an IoT is provided, the Node API may send a request to that device to update its firmware.
 
 - [Add Node Properties]({{< relref "library/agents-node-properties.md" >}})
 

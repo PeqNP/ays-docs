@@ -18,6 +18,8 @@ To have your agent report a single value, please do the following:
 }
 ```
 
-This will report a single value that represents the load of the `cpu`. If the `value` (in this context `0.5`) goes `above` the threshold of `0.95`, the monitor will be transition into a `critical` state.
+This will report a single value that represents the load of the `cpu`. If the `value` (in this context `0.5`) goes `above` the threshold of `0.95`, the monitor will transition into a `critical` state.
+
+## More reading
 
 - [Available Agent Threshold Types]({{< relref "library/agents-threshold-types.md" >}})
