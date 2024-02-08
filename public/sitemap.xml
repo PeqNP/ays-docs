@@ -3,14 +3,84 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2024-01-26T14:59:42-08:00</lastmod>
+    <lastmod>2024-02-08T09:28:27-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-template/</loc>
+    <lastmod>2024-02-08T09:28:27-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
-    <lastmod>2024-01-26T14:59:42-08:00</lastmod>
+    <lastmod>2024-02-08T09:28:27-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-node-properties/</loc>
+    <lastmod>2024-02-08T09:28:14-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-heartbeat/</loc>
+    <lastmod>2024-02-08T09:28:02-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-threshold-types/</loc>
+    <lastmod>2024-02-08T09:26:58-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-status-value/</loc>
+    <lastmod>2024-02-08T09:26:51-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-multiple-values/</loc>
+    <lastmod>2024-02-08T09:26:39-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-single-value/</loc>
+    <lastmod>2024-02-08T09:01:47-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-relationship-child/</loc>
+    <lastmod>2024-02-08T08:44:41-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-relationship-parent/</loc>
+    <lastmod>2024-02-08T08:36:10-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/what-is-an-agent/</loc>
+    <lastmod>2024-02-08T07:46:04-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

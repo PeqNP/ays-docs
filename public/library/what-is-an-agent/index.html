@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Self Reporting Agents - At Your Service Help Library</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:
+IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.122.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/help/library/what-is-an-agent/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/help/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/help/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/help/favicon-16x16.png">
+<link rel="manifest" href="/help/manifest.json">
+<link rel="mask-icon" href="/help/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/help/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">At Your Service</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/help/home">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/help/library/">
+        <li class="mobile-menu-item">Library</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">At Your Service</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+      <li class="menu-item">
+          <a class="menu-item-link" href="mailto:bitheadrl@protonmail.com">Email Us</a>
+      </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="tel:12533291280">Call Us</a>
+      </li>
+      <li class="menu-item">•</li>
+    <li class="menu-item">
+        <a class="menu-item-link" href="/help/home">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/help/library/">Library</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h1 id="self-reporting-agents">Self Reporting Agents</h1>
+<p>Agents allow any system to self-report its status. Some common examples of possible agents:</p>
+<ul>
+<li>IoT devices</li>
+<li>3rd party webhooks, such as a NewRelic alert webhook</li>
+<li>Services that may be brought up or down depending on demand</li>
+</ul>
+<p>An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node. This makes it simple to configure any sized group of nodes to behave in the same way.</p>
+<p>If you know what you need, please visit the API docs for the <code>/agent/</code> endpoint at the <a href="https://api.bithead.io:9443/docs/">External Message Ingestion Service Documentation</a> page.</p>
+<h2 id="examples">Examples</h2>
+<p>You can jump right in with these examples. What are you trying to do?</p>
+<ul>
+<li><a href="(/help/library/agents-relationship-parent/)">Create a new agent monitor on a pre-existing parent node</a>
+<ul>
+<li>Useful to track, and group, multiple different types of system issues from 3rd party analytics providers (refer to <code>Report uptime status</code>)</li>
+</ul>
+</li>
+<li><a href="/help/library/agents-relationship-child/">Create a new child node that lives under the parent node</a>
+<ul>
+<li>IoT devices</li>
+<li>Scalable systems that are built up / torn down depending on need</li>
+</ul>
+</li>
+<li><a href="/help/library/agents-single-value/">Report a single value</a>, creating a single monitor
+<ul>
+<li>IoT sensors that report a single value (humidity, water level, light level, etc.)</li>
+</ul>
+</li>
+<li><a href="/help/library/agents-multiple-values/">Report multiple values</a>, creating multiple monitors for each value
+<ul>
+<li>Proxies that report number of requests, number of errors, etc.</li>
+<li>Machine status such as CPU, HDD, RAM, and network utilization</li>
+</ul>
+</li>
+<li><a href="/help/library/agents-status-value/">Report uptime status</a>, create a monitor that represents the uptime status of a system
+<ul>
+<li>Integrate a 3rd party provider which reports the status of your system(s) via a webhook. The system may trigger an unhealthy state and may also (optionally) recover from an unhealthy state.</li>
+</ul>
+</li>
+<li><a href="/help/library/agents-template/">Template a pre-configured node</a> to adopt monitor configuration
+<ul>
+<li>A group of systems must behave in the same way</li>
+</ul>
+</li>
+</ul>
+<h2 id="required-configuration">Required Configuration</h2>
+<p>Every agent must provide the following:</p>
+<ul>
+<li>The parent the agent is associated to</li>
+<li>An &ldquo;org secret&rdquo; to ensure you have access to add nodes to the organization. Ask your admin for this value.</li>
+<li>How the agent relates to the parent (more on this later)</li>
+</ul>
+<h3 id="relationships">Relationships</h3>
+<p>An agent may relate:</p>
+<ul>
+<li>Directly to a parent node as a new monitor. This is ideal when you want to group many (3rd party) services together on a single node.</li>
+<li>As a child to the parent. This is ideal for grouping IoT devices, machines, and possibly services by a physical region, building, or floor.</li>
+</ul>
+<p>A special type of relationship exists which allows more than one agent to relate to the same child node as different monitors. Please refer to the child relationship documentation for more information.</p>
+<p>How you group nodes is up to you. <strong>ays</strong> gives you the power to manage your hierarchy in the way that best suits your needs.</p>
+<p>I want to create a:</p>
+<ul>
+<li><a href="/help/library/agents-relationship-parent/">Parent relationship</a></li>
+<li><a href="/help/library/agents-relationship-child/">Child relationship</a></li>
+</ul>
+<h3 id="values--statuses">Values &amp; Statuses</h3>
+<p>There are four ways to send status to <strong>ays</strong> from your agent.</p>
+<ul>
+<li>Provide a single value. e.g. A sensor value for humidity, light, or water level</li>
+<li>Provide multiple values. e.g. If monitoring a server, you may provide CPU, HDD, RAM, and Network in the same status payload.</li>
+<li>Provide a health status. e.g. 3rd party analytics provider, such as NewRelic, can send a signal (via a webhook) that a threshold was breached. It can also send the recovery signal.</li>
+<li>No value or status. When coupled with heartbeat configuration, this helps you know if the system is online. Obviously, this doesn&rsquo;t provide any additional insight into the state of the system.</li>
+</ul>
+<p>I want to configure an agent to report:</p>
+<ul>
+<li><a href="/help/library/agents-single-value/">Single value</a></li>
+<li><a href="/help/library/agents-multiple-values/">Multiple values</a></li>
+<li><a href="/help/library/agents-status-value/">Health Status</a></li>
+<li>Nothing. Simply omit any value or status from the payload.</li>
+</ul>
+<h3 id="heartbeat">Heartbeat</h3>
+<p>The heartbeat configuration allows you to configure your agent to alert if no signal has been received from the agent within a given timeout.</p>
+<ul>
+<li><a href="/help/library/agents-heartbeat/">Configure Agent Heartbeat</a></li>
+</ul>
+<h3 id="properties">Properties</h3>
+<p>Properties are an important way to track state information on an agent. For example, an IoT device may report its IP address, firmware version, or any other configuration as a node property.</p>
+<p>Properties may also be used by the Node API to target agent systems. For example, if the IP address of an IoT is provided, the Node API may send a request to that device to update its firmware.</p>
+<ul>
+<li><a href="/help/library/agents-node-properties/">Add Node Properties</a></li>
+</ul>
+<h3 id="templates">Templates</h3>
+<p>There may be times when you need a group of systems to behave in the same way. Templates allow you to do this by pre-configuring alerting and monitors that an agent system will adopt.</p>
+<ul>
+<li><a href="/help/library/agents-template/">Adopt a Template</a></li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:bitheadrl@protonmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/bitheadRL" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/company/100273505/admin/feed/posts/" class="iconfont icon-linkedin" title="linkedin"></a>
+  <a href="http://localhost:1313/help/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Bithead LLC 2023</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/help/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

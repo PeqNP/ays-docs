@@ -7,8 +7,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Bithead LLC 2023</copyright>
-    <lastBuildDate>Fri, 26 Jan 2024 14:59:42 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Feb 2024 09:28:27 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adopt an Agent Template</title>
+      <link>http://localhost:1313/help/library/agents-template/</link>
+      <pubDate>Thu, 08 Feb 2024 09:28:27 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-template/</guid>
+      <description>Adopt an Agent Template It may be necessary to manage a group of systems to behave in the same way. Templates allow you to do this by pre-configuring alerting and monitoring that an agent can adopt.&#xA;Below is an example of an agent adopting a template with an elder monitor.&#xA;1 2 3 4 5 6 7 8 9 10 11 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.iot&amp;#34;}, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;child&amp;#34;, path: &amp;#34;bed-42&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Grow Bed&amp;#34;}, &amp;#34;template&amp;#34;: &amp;#34;com.</description>
+    </item>
+    <item>
+      <title>Agent Node Properties</title>
+      <link>http://localhost:1313/help/library/agents-node-properties/</link>
+      <pubDate>Thu, 08 Feb 2024 09:28:14 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-node-properties/</guid>
+      <description>Add Node Properties From Agents An agent may self report properties about its internal state to @ys.&#xA;Some common properties to track:&#xA;Name of machine (if different from node name) IP address Firmware version (IoT) etc. You may report any value that may be useful.&#xA;Properties can also be used to target systems using the Node API.&#xA;To send properties from an agent, please do the following:&#xA;1 2 3 4 5 6 7 8 9 10 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.</description>
+    </item>
+    <item>
+      <title>Agent Heartbeat Configuration</title>
+      <link>http://localhost:1313/help/library/agents-heartbeat/</link>
+      <pubDate>Thu, 08 Feb 2024 09:28:02 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-heartbeat/</guid>
+      <description>Agent Heartbeat Configuration The heartbeat configuration allows you to be alerted if a sensor fails to report within a given period of time.&#xA;To configure a heartbeat, please do the following:&#xA;1 2 3 4 5 6 7 8 9 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.iot&amp;#34;}, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;child&amp;#34;, path: &amp;#34;water-sensor&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Water Level&amp;#34;}, &amp;#34;heartbeat&amp;#34;: { &amp;#34;timeout&amp;#34;: 300, &amp;#34;level&amp;#34;: &amp;#34;critical&amp;#34; } } This will transition the Water Level monitor to a critical state if the sensor is not heard from within 300 seconds (5 minutes).</description>
+    </item>
+    <item>
+      <title>Agent Threshold Types</title>
+      <link>http://localhost:1313/help/library/agents-threshold-types/</link>
+      <pubDate>Thu, 08 Feb 2024 09:26:58 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-threshold-types/</guid>
+      <description>Agent Value Threshold Types A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.&#xA;Thresholds can be configured on the status value or status values property.&#xA;above Threshold If a value goes above this threshold, the threshold will be breached:&#xA;1 {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0.</description>
+    </item>
+    <item>
+      <title>Agent Reports Status Value</title>
+      <link>http://localhost:1313/help/library/agents-status-value/</link>
+      <pubDate>Thu, 08 Feb 2024 09:26:51 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-status-value/</guid>
+      <description>Report a Status Reporting a status is useful for systems that don&amp;rsquo;t report values but can report the state of a machine.&#xA;If you use a tool like NewRelic you can use their alerting platform to define the state of a system. Typically you would write a NRQL query, associate a health state (error, critical, etc.), and then send a message to Slack. In many cases you already have this configuration setup!</description>
+    </item>
+    <item>
+      <title>Agent Reports Multiple Values</title>
+      <link>http://localhost:1313/help/library/agents-multiple-values/</link>
+      <pubDate>Thu, 08 Feb 2024 09:26:39 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-multiple-values/</guid>
+      <description>Report Multiple Values To have your agent report multiple values, please do the following:&#xA;1 2 3 4 5 6 7 8 9 10 11 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.seattle&amp;#34;}, &amp;#34;type&amp;#34;: &amp;#34;machine&amp;#34;, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;child&amp;#34;, &amp;#34;path&amp;#34;: &amp;#34;weltall-0092&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Stats&amp;#34;}, &amp;#34;values&amp;#34;: [ {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0.6, &amp;#34;threshold&amp;#34;: {&amp;#34;above&amp;#34;: 0.95, &amp;#34;level&amp;#34;: &amp;#34;critical&amp;#34;}}, {&amp;#34;name&amp;#34;: &amp;#34;ram&amp;#34;, &amp;#34;value&amp;#34;: 0.7, &amp;#34;threshold&amp;#34;: {&amp;#34;above&amp;#34;: 0.8, &amp;#34;level&amp;#34;: &amp;#34;warning&amp;#34;}}, {&amp;#34;name&amp;#34;: &amp;#34;hdd&amp;#34;, &amp;#34;value&amp;#34;: 0.2, &amp;#34;threshold&amp;#34;: {&amp;#34;above&amp;#34;: 0.75, &amp;#34;level&amp;#34;: &amp;#34;error&amp;#34;}} ] } This will report three different values for cpu, ram, and hdd resource utilization.</description>
+    </item>
+    <item>
+      <title>Agent Reports Single Value</title>
+      <link>http://localhost:1313/help/library/agents-single-value/</link>
+      <pubDate>Thu, 08 Feb 2024 09:01:47 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-single-value/</guid>
+      <description>Report a Single Value To have your agent report a single value, please do the following:&#xA;1 2 3 4 5 6 7 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.seattle&amp;#34;}, &amp;#34;type&amp;#34;: &amp;#34;machine&amp;#34;, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;child&amp;#34;, &amp;#34;path&amp;#34;: &amp;#34;weltall-0092&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;CPU&amp;#34;}, &amp;#34;value&amp;#34;: {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0.5, &amp;#34;threshold&amp;#34;: {&amp;#34;above&amp;#34;: 0.95, &amp;#34;level&amp;#34;: &amp;#34;critical&amp;#34;}} } This will report a single value that represents the load of the cpu. If the value (in this context 0.</description>
+    </item>
+    <item>
+      <title>Agent Child Relationship</title>
+      <link>http://localhost:1313/help/library/agents-relationship-child/</link>
+      <pubDate>Thu, 08 Feb 2024 08:44:41 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-relationship-child/</guid>
+      <description>Associate Agent as Child Node to Parent Node The following example will create a new node that is associated to a parent node. This will also create the monitors required to report the status of your agent.&#xA;1 2 3 4 5 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.seattle&amp;#34;}, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;child&amp;#34;, &amp;#34;path&amp;#34;: &amp;#34;weltall-0092&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Statistics&amp;#34;} } This will create a new child node, weltall-0092, to the com.example.seattle parent. The full path to your agent will be com.</description>
+    </item>
+    <item>
+      <title>Agent Parent Relationship</title>
+      <link>http://localhost:1313/help/library/agents-relationship-parent/</link>
+      <pubDate>Thu, 08 Feb 2024 08:36:10 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/agents-relationship-parent/</guid>
+      <description>Associate Agent to Pre-Existing Parent Node The following example will associate your agent monitor to a pre-exising parent node as a new monitor.&#xA;1 2 3 4 5 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.mobile.ios&amp;#34;}, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;parent&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Max Requests Breached on Product Service&amp;#34;} } This will associate your agent as a new monitor, called Max Requests Breached On Product Service to the com.example.mobile.ios node.&#xA;Now we need to track the health of the monitor.</description>
+    </item>
+    <item>
+      <title>Self Reporting Agents</title>
+      <link>http://localhost:1313/help/library/what-is-an-agent/</link>
+      <pubDate>Thu, 08 Feb 2024 07:46:04 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/what-is-an-agent/</guid>
+      <description>Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:&#xA;IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also template another node.</description>
+    </item>
     <item>
       <title>What Is a Node Api</title>
       <link>http://localhost:1313/help/library/what-is-a-node-api/</link>

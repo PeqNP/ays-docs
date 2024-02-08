@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome - At Your Service Help Library</title>
+  <title>Agent Threshold Types - At Your Service Help Library</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,8 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Help Library Do you need help? Click here to see our contact options.
-@ys Basics Introduction to At Your Service Video Tutorials The System Graph Create, Update, &amp;amp; Move Nodes Link Dependencies Navigation Configuring Monitors Software keys Global Software Keys Supplementary API Reference - Utility libraries for sensor scripts 3rd Party Libraries - Supported 3rd party libraries, and usage, installed on @ys servers Node API Reference - Connect and configure services and machines remotely Monitors &amp;amp; Sensors What is a monitor How do I write a monitor sensor How do I query a server How do I ping a host Invalid call parameters Agent sensors App-specific Contextual Help These articles are contextual to the app." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="Agent Value Threshold Types A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.
+Thresholds can be configured on the status value or status values property.
+above Threshold If a value goes above this threshold, the threshold will be breached:
+1 {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -27,7 +29,7 @@
 <meta name="generator" content="Hugo 0.122.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/help/home/" />
+<link rel="canonical" href="http://localhost:1313/help/library/agents-threshold-types/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/help/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/help/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/help/favicon-16x16.png">
@@ -110,57 +112,22 @@
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <h1 id="help-library">Help Library</h1>
-<p>Do you need help? <a href="/help/library/contact-ays-representative/">Click here</a> to see our contact options.</p>
-<h2 id="ys-basics">@ys Basics</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=zmF8SuhVe_I">Introduction to At Your Service</a></li>
-</ul>
-<h3 id="video-tutorials">Video Tutorials</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=3VawuzUcEJU">The System Graph</a></li>
-<li><a href="https://youtu.be/4gYpX-IBxkM">Create, Update, &amp; Move Nodes</a></li>
-<li><a href="https://youtu.be/uLsfU88qp_I">Link Dependencies</a></li>
-<li><a href="https://youtu.be/KSFvgU5-ff4">Navigation</a></li>
-<li><a href="https://youtu.be/1xw5lgAEAP8">Configuring Monitors</a></li>
-<li><a href="https://youtu.be/vtgVAHT4kqA">Software keys</a></li>
-<li><a href="https://youtu.be/7-Is4LPHWXg">Global Software Keys</a></li>
-</ul>
-<h3 id="supplementary">Supplementary</h3>
-<ul>
-<li><a href="/help/library/ays-api-reference/">API Reference</a> - Utility libraries for sensor scripts</li>
-<li><a href="/help/library/ays-third-party-libs/">3rd Party Libraries</a> - Supported 3rd party libraries, and usage, installed on @ys servers</li>
-<li><a href="/help/library/what-is-a-node-api/">Node API Reference</a> - Connect and configure services and machines remotely</li>
-</ul>
-<h2 id="monitors--sensors">Monitors &amp; Sensors</h2>
-<ul>
-<li><a href="/help/library/what-is-a-measurement/">What is a monitor</a></li>
-<li><a href="/help/library/how-do-i-configure-a-measurement-sensor/">How do I write a monitor sensor</a></li>
-<li><a href="/help/library/how-do-i-query-a-server/">How do I query a server</a></li>
-<li><a href="/help/library/how-do-i-ping-a-host/">How do I ping a host</a></li>
-<li><a href="/help/library/invalid-call-parameters/">Invalid call parameters</a></li>
-<li><a href="/help/library/what-is-an-agent/">Agent sensors</a></li>
-</ul>
-<h2 id="app-specific-contextual-help">App-specific Contextual Help</h2>
-<p>These articles are contextual to the app. They are listed here for reference.</p>
-<ul>
-<li><a href="/help/library/how-do-i-configure-new-relic/">How do I configure NewRelic</a></li>
-<li><a href="/help/library/how-do-i-connect-slack/">How do I configure Embrace</a></li>
-<li><a href="/help/library/how-do-i-connect-slack/">How do I connect Slack</a></li>
-<li><a href="/help/library/how-do-i-modify-a-reference-measurement/">How do I modify a reference monitor</a></li>
-<li><a href="/help/library/how-is-node-health-computed/">How is node health computed</a></li>
-<li><a href="/help/library/how-to-understand-measurement-health/">How to understand monitor health</a></li>
-<li><a href="/help/library/read-only-threshold/">What is a read-only threshold</a></li>
-<li><a href="/help/library/what-is-a-node-relationship/">What is a node relationship</a></li>
-<li><a href="/help/library/what-is-node-alert-config/">What is node alerting configuration</a></li>
-<li><a href="/help/library/what-is-a-node-property/">What is a node property</a></li>
-<li><a href="/help/library/what-is-a-runbook/">What is a runbook</a></li>
-<li><a href="/help/library/what-is-a-template-node/">What is a template node</a></li>
-<li><a href="/help/library/what-is-a-valid-node-name/">What is a valid node name</a></li>
-<li><a href="/help/library/what-is-external-alerting-config/">What is external alerting config</a></li>
-<li><a href="/help/library/virtual-nodes/">What are virtual nodes</a></li>
-<li><a href="/help/library/read-only-threshold/">What is a read-only threshold</a></li>
-</ul>
+    <h1 id="agent-value-threshold-types">Agent Value Threshold Types</h1>
+<p>A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.</p>
+<p>Thresholds can be configured on the status <code>value</code> or status <code>values</code> property.</p>
+<h2 id="above-threshold"><code>above</code> Threshold</h2>
+<p>If a value goes <code>above</code> this threshold, the threshold will be breached:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="p">{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;cpu&#34;</span><span class="p">,</span> <span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="nt">&#34;threshold&#34;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&#34;above&#34;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">,</span> <span class="nt">&#34;level&#34;</span><span class="p">:</span> <span class="s2">&#34;critical&#34;</span><span class="p">}}</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If <code>value</code>, <code>0.6</code>, goes <code>above</code> <code>0.95</code>, the monitor will transitino into a <code>critical</code> state.</p>
+<h2 id="alerting-levels">Alerting Levels</h2>
+<p>The available alerting levels are <code>warning</code>, <code>error</code>, and <code>critical</code>. Each level represents a different &ldquo;health&rdquo; value. <code>warning</code> is considered 30% unhealthy, <code>error</code> 60% unhealthy, and <code>critical</code> 100% unhealthy. This &ldquo;health&rdquo; value effects how the health is reported within the app but also how it affects the health of related nodes. For more information, please refer to <a href="/help/library/how-is-node-health-computed/">How is Node Health Computed?</a>.</p>
 
   </div>
 </article>
