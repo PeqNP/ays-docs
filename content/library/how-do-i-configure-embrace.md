@@ -4,6 +4,8 @@ date: 2022-09-21T10:51:45-07:00
 draft: false
 ---
 
+This configuration is currently out-of-date. **@ys** does not currently support Embrace.
+
 # How Do I Configure Embrace?
 
 Configuring Embrace requires three flows:

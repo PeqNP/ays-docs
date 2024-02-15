@@ -42,7 +42,6 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 These articles are contextual to the app. They are listed here for reference.
 
 - [How do I configure NewRelic]({{< relref "library/how-do-i-configure-new-relic.md" >}})
-- [How do I configure Embrace]({{< relref "library/how-do-i-connect-slack.md" >}})
 - [How do I connect Slack]({{< relref "library/how-do-i-connect-slack.md" >}})
 - [How do I modify a reference monitor]({{< relref "library/how-do-i-modify-a-reference-measurement.md" >}})
 - [How is node health computed]({{< relref "library/how-is-node-health-computed.md" >}})

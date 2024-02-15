@@ -86,25 +86,21 @@ Paste the following template into the "Payload template" field
 
 ```
 {
-  "id": {{ json issueId }},
-  "incidentIds": {{ json incidentIds }},
-  "totalIncidents": {{ json totalIncidents }},
-  "accounts": {{ json labels.originalAccountIds }},
-  "entityIds": {{ json entitiesData.ids }},
-  "entityNames": {{ json entitiesData.names }},
-  "conditionIds": {{ json accumulations.conditionFamilyId }},
-  "conditionNames": {{ json accumulations.conditionName }},
-  "priority": {{ json priority }},
-  "state": {{ json state }},
-  "createdAt": {{ createdAt }},
-  "updatedAt": {{ updatedAt }},
-  "closedAt": {{ closedAt }},
-  "description": {{ json annotations.title }},
-  "url": {{ json issuePageUrl }},
-  "runbookUrl": {{ json accumulations.runbookUrl }}
+    "parent": {"property": "path", "value": "com.example.mobile.ios"},
+    "org_secret": "your_org_secret_goes_here",
+    "relationship": {"type": "parent", "monitor_name": {{ json annotations.title.[0] }} },
+    "status": {
+        "message": {{ json annotations.title.[0] }},
+        "state": "{{ eq priority "CRITICAL" yes='critical' no='error' }}"
+    }
 }
-
 ```
+
+This will associate all NewRelic alerts, as new monitors, to the `com.example.mobile.ios` parent node. Please refer to the [Agent Sensor docs]({{< relref "library/what-is-an-agent.md" >}}) for more information on how to associate agent alerts as new child nodes, etc.
+
+**Please note:**
+- This will consider any message sent from NewRelic as critical or error status. This means, even if the error comes out of a bad state, it will not self heal. These docs will be updated with a better configuration once I discover a better way to format the `state` value, given their toolset.
+- Please refer to [NewRelic Docs](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json) when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.
 
 Tap the Save / Update message button
 
