@@ -16,10 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="How Do I Configure New Relic? Configuring New Relic requires three flows:
-Associating the New Relic Entity GUID to an @ys Node Creating a New Relic webhook that sends alerts to the @ys webhook service Configuring policies to send condition alerts to the @ys webhook Associating New Relic Entity GUID to @ys Node Sign in to your New Relic account.
-Go to &amp;ldquo;All Entities.&amp;rdquo;
-On the entity you wish to track, such as an iOS app, tap the ellipses button at the right-most of the cell." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="How Do I Configure New Relic? Configuring New Relic requires:
+Creating a New Relic webhook that sends alerts to the @ys agent service Configure policies to send condition alerts to the @ys agent service Configure a New Relic Webhook Sign in to your account Tap the Alerts &amp;amp; AI tab on the left Tap on Destinations Tap on Webhook You will see the &amp;ldquo;Add a destination&amp;rdquo; group with two fields." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -113,34 +111,23 @@ On the entity you wish to track, such as an iOS app, tap the ellipses button at 
           <article class="post">
   <div class="post-content">
     <h1 id="how-do-i-configure-new-relic">How Do I Configure New Relic?</h1>
-<p>Configuring New Relic requires three flows:</p>
+<p>Configuring New Relic requires:</p>
 <ul>
-<li>Associating the New Relic Entity GUID to an <strong>@ys</strong> Node</li>
-<li>Creating a New Relic webhook that sends alerts to the <strong>@ys</strong> webhook service</li>
-<li>Configuring policies to send condition alerts to the <strong>@ys</strong> webhook</li>
+<li>Creating a New Relic webhook that sends alerts to the <strong>@ys</strong> <a href="/help/library/what-is-an-agent/">agent service</a></li>
+<li>Configure policies to send condition alerts to the <strong>@ys</strong> agent service</li>
 </ul>
-<h2 id="associating-new-relic-entity-guid-to-ys-node">Associating New Relic Entity GUID to <strong>@ys</strong> Node</h2>
-<p>Sign in to your <a href="https://www.newrelic.com">New Relic</a> account.</p>
-<p>Go to &ldquo;All Entities.&rdquo;</p>
-<p>On the entity you wish to track, such as an iOS app, tap the ellipses button at the right-most of the cell.
-Tap the &ldquo;See metadata &amp; tags&rdquo; option.</p>
-<p><img src="/help/img/new-relic-metadata.png" alt="New Relic Metadata"></p>
-<p>Copy the &ldquo;Entity guid.&rdquo;</p>
-<p><img src="/help/img/new-relic-entity-guid.png" alt="New Relic Entity GUID"></p>
-<p>Navigate to the respective Node in <strong>@ys</strong> you wish to configure the app to in <strong>@ys</strong>.</p>
-<p>Tap on &ldquo;External alerting&rdquo;.</p>
-<p>Paste the entity guid value into the &ldquo;Entity GUID&rdquo; field under the &ldquo;New Relic&rdquo; group.</p>
-<p><img src="/help/img/new-relic-external-config.png" alt="New Relic External Config"></p>
-<p>Go back to the previous page and &ldquo;Save&rdquo; the node.</p>
-<h2 id="configuring-a-new-relic-webhook">Configuring a New Relic Webhook</h2>
-<p>While still signed in, tap the &ldquo;Alerts &amp; AI&rdquo; tab on the left.</p>
-<p>Tap on &ldquo;Destinations.&rdquo;</p>
-<p>Tap on &ldquo;Webhook.&rdquo;</p>
+<h2 id="configure-a-new-relic-webhook">Configure a New Relic Webhook</h2>
+<ul>
+<li>Sign in to your account</li>
+<li>Tap the <code>Alerts &amp; AI</code> tab on the left</li>
+<li>Tap on <code>Destinations</code></li>
+<li>Tap on <code>Webhook</code></li>
+</ul>
 <p><img src="/help/img/new-relic-destinations.png" alt="New Relic External Config"></p>
 <p>You will see the &ldquo;Add a destination&rdquo; group with two fields.</p>
 <ul>
-<li>Enter <code>@ys</code> for the &ldquo;Webhook name&rdquo;</li>
-<li>Enter <code>https://api.getbithead.com:9443/newrelic</code> for the &ldquo;Endpoint URL&rdquo;</li>
+<li>Enter &ldquo;@ys&rdquo; for the <code>Webhook name</code></li>
+<li>Enter <code>https://api.bithead.io:9443/agent</code> for the <code>Endpoint URL</code></li>
 <li>Save the destination (button on the bottom right)</li>
 </ul>
 <p><img src="/help/img/new-relic-webhook.png" alt="New Relic External Config"></p>
@@ -150,60 +137,50 @@ Tap the &ldquo;See metadata &amp; tags&rdquo; option.</p>
 <p><strong>@ys</strong> accepts alerts from the modern New Relic alerting system called a &ldquo;Workflow.&rdquo; A workflow can include alerting configuration for one or more policies. A policy consists of one or more &ldquo;Conditions.&rdquo; This one to many relationship between &ldquo;conditions&rdquo; and a &ldquo;policy&rdquo; reduces the number of locations you need to configure your webhook.</p>
 <p>All this to say, that you must have configured your alerting to use workflows. And, you may only need to update a single policy workflow to capture all signals from every condition.</p>
 <p>To configure a workflow, do the following:</p>
-<p>Tap on &ldquo;Alerts &amp; AI.&rdquo;</p>
-<p>Tap on &ldquo;Workflows.&rdquo;</p>
-<p>Tap on the policy to configure.</p>
+<ul>
+<li>Tap on <code>Alerts &amp; AI</code></li>
+<li>Tap on <code>Workflows</code></li>
+<li>Tap on the policy to configure</li>
+</ul>
 <p><img src="/help/img/new-relic-policies.png" alt="New Relic Policies"></p>
-<p>Scroll down to the &ldquo;Notify&rdquo; group and tap the &ldquo;Webhook&rdquo; button.</p>
+<p>Scroll down to the <code>Notify</code> group and tap the <code>Webhook</code> button.</p>
 <p><img src="/help/img/new-relic-policy-add-webhook.png" alt="New Relic Policies"></p>
 <p>This will show the &ldquo;Edit notification message&rdquo; form.</p>
-<p>Select <code>@ys</code> as the &ldquo;Destination.&rdquo;</p>
-<p>Paste the following template into the &ldquo;Payload template&rdquo; field</p>
+<p>Select <code>@ys</code> as the <code>Destination</code>.</p>
+<p>Paste the following template into the <code>Payload template</code> field</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">  &#34;id&#34;: {{ json issueId }},
-</span></span><span class="line"><span class="cl">  &#34;incidentIds&#34;: {{ json incidentIds }},
-</span></span><span class="line"><span class="cl">  &#34;totalIncidents&#34;: {{ json totalIncidents }},
-</span></span><span class="line"><span class="cl">  &#34;accounts&#34;: {{ json labels.originalAccountIds }},
-</span></span><span class="line"><span class="cl">  &#34;entityIds&#34;: {{ json entitiesData.ids }},
-</span></span><span class="line"><span class="cl">  &#34;entityNames&#34;: {{ json entitiesData.names }},
-</span></span><span class="line"><span class="cl">  &#34;conditionIds&#34;: {{ json accumulations.conditionFamilyId }},
-</span></span><span class="line"><span class="cl">  &#34;conditionNames&#34;: {{ json accumulations.conditionName }},
-</span></span><span class="line"><span class="cl">  &#34;priority&#34;: {{ json priority }},
-</span></span><span class="line"><span class="cl">  &#34;state&#34;: {{ json state }},
-</span></span><span class="line"><span class="cl">  &#34;createdAt&#34;: {{ createdAt }},
-</span></span><span class="line"><span class="cl">  &#34;updatedAt&#34;: {{ updatedAt }},
-</span></span><span class="line"><span class="cl">  &#34;closedAt&#34;: {{ closedAt }},
-</span></span><span class="line"><span class="cl">  &#34;description&#34;: {{ json annotations.title }},
-</span></span><span class="line"><span class="cl">  &#34;url&#34;: {{ json issuePageUrl }},
-</span></span><span class="line"><span class="cl">  &#34;runbookUrl&#34;: {{ json accumulations.runbookUrl }}
+</span></span><span class="line"><span class="cl">    &#34;parent&#34;: {&#34;property&#34;: &#34;path&#34;, &#34;value&#34;: &#34;com.example.mobile.ios&#34;},
+</span></span><span class="line"><span class="cl">    &#34;org_secret&#34;: &#34;your_org_secret_goes_here&#34;,
+</span></span><span class="line"><span class="cl">    &#34;relationship&#34;: {&#34;type&#34;: &#34;parent&#34;, &#34;monitor_name&#34;: {{ json annotations.title.[0] }} },
+</span></span><span class="line"><span class="cl">    &#34;status&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;message&#34;: {{ json annotations.title.[0] }},
+</span></span><span class="line"><span class="cl">        &#34;state&#34;: &#34;{{ eq priority &#34;CRITICAL&#34; yes=&#39;critical&#39; no=&#39;error&#39; }}&#34;
+</span></span><span class="line"><span class="cl">    }
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Tap the Save / Update message button</p>
+</div><p>This will associate all NewRelic alerts, as new monitors, to the <code>com.example.mobile.ios</code> node. Please enter the correct node path you wish to associate these alerts to. For more information on how to associate agent alerts as new child nodes, please refer to the <a href="/help/library/what-is-an-agent/">Agent Sensor docs</a>.</p>
+<p><strong>Please note:</strong></p>
+<ul>
+<li>This will consider any message sent from NewRelic as a critical or error status. This means self healing currently isn&rsquo;t supported with NewRelic until I can figure out how to user their toolset to provide the correct value depending on their priority and state. You can still manually <code>Resolve</code> the alert on the respective monitor sensor from within the app.</li>
+<li>Please refer to <a href="https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json">NewRelic Docs</a> when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.</li>
+</ul>
+<p>Tap the Save / Update message button</p>
 <p><img src="/help/img/new-relic-policy-webhook-config.png" alt="New Relic Policies"></p>
-<p>Please tap the &ldquo;Test workflow&rdquo; to ensure integration is complete.</p>
+<p>Please tap the <code>Test workflow</code> button to ensure integration works successfully.</p>
 <p>Please do this for every other policy workflow that needs to send data to <strong>@ys</strong>.</p>
 
   </div>

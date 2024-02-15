@@ -189,14 +189,14 @@
       <link>http://localhost:1313/help/library/how-do-i-configure-new-relic/</link>
       <pubDate>Wed, 21 Sep 2022 10:51:53 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-new-relic/</guid>
-      <description>How Do I Configure New Relic? Configuring New Relic requires three flows:&#xA;Associating the New Relic Entity GUID to an @ys Node Creating a New Relic webhook that sends alerts to the @ys webhook service Configuring policies to send condition alerts to the @ys webhook Associating New Relic Entity GUID to @ys Node Sign in to your New Relic account.&#xA;Go to &amp;ldquo;All Entities.&amp;rdquo;&#xA;On the entity you wish to track, such as an iOS app, tap the ellipses button at the right-most of the cell.</description>
+      <description>How Do I Configure New Relic? Configuring New Relic requires:&#xA;Creating a New Relic webhook that sends alerts to the @ys agent service Configure policies to send condition alerts to the @ys agent service Configure a New Relic Webhook Sign in to your account Tap the Alerts &amp;amp; AI tab on the left Tap on Destinations Tap on Webhook You will see the &amp;ldquo;Add a destination&amp;rdquo; group with two fields.</description>
     </item>
     <item>
       <title>How Do I Configure Embrace</title>
       <link>http://localhost:1313/help/library/how-do-i-configure-embrace/</link>
       <pubDate>Wed, 21 Sep 2022 10:51:45 -0700</pubDate>
       <guid>http://localhost:1313/help/library/how-do-i-configure-embrace/</guid>
-      <description>How Do I Configure Embrace? Configuring Embrace requires three flows:&#xA;Associating the Embrace App ID to an @ys Node Creating an Embrace webhook that sends alerts to the @ys webhook service Configuring alerts to send to the @ys webhook Associate Embrace App ID to an @ys Node Sign in to your Embrace account.&#xA;Tap on the &amp;ldquo;(Switch) App&amp;rdquo; icon (currently the top-most button in the left tab bar on desktop). You should see a list of your apps that you are monitoring.</description>
+      <description>This configuration is currently out-of-date. @ys does not currently support Embrace.&#xA;How Do I Configure Embrace? Configuring Embrace requires three flows:&#xA;Associating the Embrace App ID to an @ys Node Creating an Embrace webhook that sends alerts to the @ys webhook service Configuring alerts to send to the @ys webhook Associate Embrace App ID to an @ys Node Sign in to your Embrace account.&#xA;Tap on the &amp;ldquo;(Switch) App&amp;rdquo; icon (currently the top-most button in the left tab bar on desktop).</description>
     </item>
     <item>
       <title>What Is External Alerting Config</title>
