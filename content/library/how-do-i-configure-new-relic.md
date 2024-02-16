@@ -63,16 +63,14 @@ Paste the following template into the `Payload template` field
     "relationship": {"type": "parent", "monitor_name": {{ json annotations.title.[0] }} },
     "status": {
         "message": {{ json annotations.title.[0] }},
-        "state": "{{ eq priority "CRITICAL" yes='critical' no='error' }}"
+        "state": "{{#if (eq state "CLOSED")}}healthy{{else}}{{#eq priority "CRITICAL"}}critical{{else}}{{/eq}}{{#eq priority "ERROR"}}error{{else}}{{/eq}}{{#eq priority "WARNING"}}warning{{else}}{{/eq}}{{#eq priority "LOW"}}warning{{else}}{{/eq}}{{/if}}"
     }
 }
 ```
 
 This will associate all NewRelic alerts, as new monitors, to the `com.example.mobile.ios` node. Please enter the correct node path you wish to associate these alerts to. For more information on how to associate agent alerts as new child nodes, please refer to the [Agent Sensor docs]({{< relref "library/what-is-an-agent.md" >}}).
 
-**Please note:**
-- This will consider any message sent from NewRelic as a critical or error status. This means self healing currently isn't supported with NewRelic until I can figure out how to user their toolset to provide the correct value depending on their priority and state. You can still manually `Resolve` the alert on the respective monitor sensor from within the app.
-- Please refer to [NewRelic Docs](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json) when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.
+Please refer to the [NewRelic Docs](https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json) when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.
 
 Tap the Save / Update message button
 
