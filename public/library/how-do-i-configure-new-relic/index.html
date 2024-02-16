@@ -167,17 +167,13 @@ Creating a New Relic webhook that sends alerts to the @ys agent service Configur
 </span></span><span class="line"><span class="cl">    &#34;relationship&#34;: {&#34;type&#34;: &#34;parent&#34;, &#34;monitor_name&#34;: {{ json annotations.title.[0] }} },
 </span></span><span class="line"><span class="cl">    &#34;status&#34;: {
 </span></span><span class="line"><span class="cl">        &#34;message&#34;: {{ json annotations.title.[0] }},
-</span></span><span class="line"><span class="cl">        &#34;state&#34;: &#34;{{ eq priority &#34;CRITICAL&#34; yes=&#39;critical&#39; no=&#39;error&#39; }}&#34;
+</span></span><span class="line"><span class="cl">        &#34;state&#34;: &#34;{{#if (eq state &#34;CLOSED&#34;)}}healthy{{else}}{{#eq priority &#34;CRITICAL&#34;}}critical{{else}}{{/eq}}{{#eq priority &#34;ERROR&#34;}}error{{else}}{{/eq}}{{#eq priority &#34;WARNING&#34;}}warning{{else}}{{/eq}}{{#eq priority &#34;LOW&#34;}}warning{{else}}{{/eq}}{{/if}}&#34;
 </span></span><span class="line"><span class="cl">    }
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>This will associate all NewRelic alerts, as new monitors, to the <code>com.example.mobile.ios</code> node. Please enter the correct node path you wish to associate these alerts to. For more information on how to associate agent alerts as new child nodes, please refer to the <a href="/help/library/what-is-an-agent/">Agent Sensor docs</a>.</p>
-<p><strong>Please note:</strong></p>
-<ul>
-<li>This will consider any message sent from NewRelic as a critical or error status. This means self healing currently isn&rsquo;t supported with NewRelic until I can figure out how to user their toolset to provide the correct value depending on their priority and state. You can still manually <code>Resolve</code> the alert on the respective monitor sensor from within the app.</li>
-<li>Please refer to <a href="https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json">NewRelic Docs</a> when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.</li>
-</ul>
+<p>Please refer to the <a href="https://docs.newrelic.com/docs/alerts-applied-intelligence/notifications/message-templates/#json">NewRelic Docs</a> when determining which fields to use for your alerts. You may wish to include a condition, issue information, etc. to the alert.</p>
 <p>Tap the Save / Update message button</p>
 <p><img src="/help/img/new-relic-policy-webhook-config.png" alt="New Relic Policies"></p>
 <p>Please tap the <code>Test workflow</code> button to ensure integration works successfully.</p>
