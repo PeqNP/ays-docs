@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Self Reporting Agents - At Your Service Help Library</title>
+  <title>Agent Sensors - At Your Service Help Library</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,8 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:
-IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="olOwOlo" /><meta name="description" content="Agent Sensors Agent sensors allow any system to self-report its status. Some common examples of possible agents:
+IoT devices 3rd party webhooks, such as a NewRelic alert webhook Track server resource usage An agent can create its own child node or add a monitor to an existing parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -110,24 +110,24 @@ IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that m
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <h1 id="self-reporting-agents">Self Reporting Agents</h1>
-<p>Agents allow any system to self-report its status. Some common examples of possible agents:</p>
+    <h1 id="agent-sensors">Agent Sensors</h1>
+<p>Agent sensors allow any system to self-report its status. Some common examples of possible agents:</p>
 <ul>
 <li>IoT devices</li>
 <li>3rd party webhooks, such as a NewRelic alert webhook</li>
-<li>Services that may be brought up or down depending on demand</li>
+<li>Track server resource usage</li>
 </ul>
-<p>An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.</p>
+<p>An agent can create its own child node or add a monitor to an existing parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.</p>
 <p>If you know what you need, please visit the API docs for the <code>/agent/</code> endpoint at the <a href="https://api.bithead.io:9443/docs/">External Message Ingestion Service Documentation</a> page.</p>
 <h2 id="examples">Examples</h2>
 <p>You can jump right in with these examples. What are you trying to do?</p>
 <ul>
-<li><a href="(/help/library/agents-relationship-parent/)">Create a new agent monitor on a pre-existing parent node</a>
+<li><a href="(/help/library/agents-relationship-parent/)">Associate an agent monitor to a parent node</a>
 <ul>
 <li>Useful to track, and group, multiple different types of system issues from 3rd party analytics providers (refer to <code>Report uptime status</code>)</li>
 </ul>
 </li>
-<li><a href="/help/library/agents-relationship-child/">Create a new child node that lives under the parent node</a>
+<li><a href="/help/library/agents-relationship-child/">Create a new node that lives under the parent node</a>
 <ul>
 <li>IoT devices</li>
 <li>Scalable systems that are built up / torn down depending on need</li>
@@ -149,7 +149,7 @@ IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that m
 <li>Integrate a 3rd party provider which reports the status of your system(s) via a webhook. The system may trigger an unhealthy state and may also (optionally) recover from an unhealthy state.</li>
 </ul>
 </li>
-<li><a href="/help/library/agents-template/">Template a pre-configured node</a> to adopt monitor configuration
+<li><a href="/help/library/agents-template/">Adopt a template node</a>
 <ul>
 <li>A group of systems must behave in the same way</li>
 </ul>

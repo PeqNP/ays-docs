@@ -1,18 +1,18 @@
 ---
-title: "Self Reporting Agents"
+title: "Agent Sensors"
 date: 2024-02-08T07:46:04-08:00
 draft: false
 ---
 
-# Self Reporting Agents
+# Agent Sensors
 
-Agents allow any system to self-report its status. Some common examples of possible agents:
+Agent sensors allow any system to self-report its status. Some common examples of possible agents:
 
 - IoT devices
 - 3rd party webhooks, such as a NewRelic alert webhook
-- Services that may be brought up or down depending on demand
+- Track server resource usage
 
-An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.
+An agent can create its own child node or add a monitor to an existing parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.
 
 If you know what you need, please visit the API docs for the `/agent/` endpoint at the [External Message Ingestion Service Documentation](https://api.bithead.io:9443/docs/) page.
 
@@ -20,9 +20,9 @@ If you know what you need, please visit the API docs for the `/agent/` endpoint 
 
 You can jump right in with these examples. What are you trying to do?
 
-- [Create a new agent monitor on a pre-existing parent node](({{< relref "library/agents-relationship-parent.md" >}}))
+- [Associate an agent monitor to a parent node](({{< relref "library/agents-relationship-parent.md" >}}))
   - Useful to track, and group, multiple different types of system issues from 3rd party analytics providers (refer to `Report uptime status`)
-- [Create a new child node that lives under the parent node]({{< relref "library/agents-relationship-child.md" >}})
+- [Create a new node that lives under the parent node]({{< relref "library/agents-relationship-child.md" >}})
   - IoT devices
   - Scalable systems that are built up / torn down depending on need
 - [Report a single value]({{< relref "library/agents-single-value.md" >}}), creating a single monitor
@@ -32,7 +32,7 @@ You can jump right in with these examples. What are you trying to do?
   - Machine status such as CPU, HDD, RAM, and network utilization
 - [Report uptime status]({{< relref "library/agents-status-value.md" >}}), create a monitor that represents the uptime status of a system
   - Integrate a 3rd party provider which reports the status of your system(s) via a webhook. The system may trigger an unhealthy state and may also (optionally) recover from an unhealthy state.
-- [Template a pre-configured node]({{< relref "library/agents-template.md" >}}) to adopt monitor configuration
+- [Adopt a template node]({{< relref "library/agents-template.md" >}})
   - A group of systems must behave in the same way
 
 ## Required Configuration

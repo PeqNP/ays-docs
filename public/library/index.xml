@@ -73,11 +73,11 @@
       <description>Associate Agent to Pre-Existing Parent Node The following example will associate your agent monitor to a pre-exising parent node as a new monitor.&#xA;1 2 3 4 5 { &amp;#34;parent&amp;#34;: {&amp;#34;property&amp;#34;: &amp;#34;path&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;com.example.mobile.ios&amp;#34;}, &amp;#34;org_secret&amp;#34;: &amp;#34;my_org_secret&amp;#34;, &amp;#34;relationship&amp;#34;: {&amp;#34;type&amp;#34;: &amp;#34;parent&amp;#34;, &amp;#34;monitor_name&amp;#34;: &amp;#34;Max Requests Breached on Product Service&amp;#34;} } This will associate your agent as a new monitor, called Max Requests Breached On Product Service to the com.example.mobile.ios node.&#xA;Now we need to track the health of the monitor.</description>
     </item>
     <item>
-      <title>Self Reporting Agents</title>
+      <title>Agent Sensors</title>
       <link>http://localhost:1313/help/library/what-is-an-agent/</link>
       <pubDate>Thu, 08 Feb 2024 07:46:04 -0800</pubDate>
       <guid>http://localhost:1313/help/library/what-is-an-agent/</guid>
-      <description>Self Reporting Agents Agents allow any system to self-report its status. Some common examples of possible agents:&#xA;IoT devices 3rd party webhooks, such as a NewRelic alert webhook Services that may be brought up or down depending on demand An agent can relate to a pre-configured node in the system, or it can create its own node as a child to a parent node. An agent may also adopt a template.</description>
+      <description>Agent Sensors Agent sensors allow any system to self-report its status. Some common examples of possible agents:&#xA;IoT devices 3rd party webhooks, such as a NewRelic alert webhook Track server resource usage An agent can create its own child node or add a monitor to an existing parent node. An agent may also adopt a template. Templates make it easy to configure, and manage, any sized group of nodes to behave in the same way.</description>
     </item>
     <item>
       <title>What Is a Node Api</title>
