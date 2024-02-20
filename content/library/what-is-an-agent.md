@@ -20,7 +20,7 @@ If you know what you need, please visit the API docs for the `/agent/` endpoint 
 
 You can jump right in with these examples. What are you trying to do?
 
-- [Associate an agent monitor to a parent node](({{< relref "library/agents-relationship-parent.md" >}}))
+- [Associate an agent monitor to a parent node]({{< relref "library/agents-relationship-parent.md" >}})
   - Useful to track, and group, multiple different types of system issues from 3rd party analytics providers (refer to `Report uptime status`)
 - [Create a new node that lives under the parent node]({{< relref "library/agents-relationship-child.md" >}})
   - IoT devices
