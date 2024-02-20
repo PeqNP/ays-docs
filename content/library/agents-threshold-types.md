@@ -8,17 +8,57 @@ draft: false
 
 A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.
 
-Thresholds can be configured on the status `value` or status `values` property.
+Thresholds are configured on the status `value` or `values` property.
 
 ## `above` Threshold
 
-If a value goes `above` this threshold, the threshold will be breached:
+If a value goes `above` the threshold, the threshold will be breached:
 
 ```json
-    {"name": "cpu", "value": 0.6, "threshold": {"above": 0.95, "level": "critical"}},
+{"name": "cpu", "value": 0.6, "threshold": {"above": 0.95, "level": "critical"}},
 ```
 
-If `value`, `0.6`, goes `above` `0.95`, the monitor will transitino into a `critical` state.
+If `value`, `0.6`, goes `above` `0.95`, the monitor will transition into a `critical` state.
+
+## `below` Threshold
+
+If a value goes `below` the threshold, the threshold will be breached:
+
+```json
+{"name": "cpu", "value": 0.6, "threshold": {"below": 0.95, "level": "error"}},
+```
+
+If `value`, `0.6`, goes `below` `0.95`, the monitor will transition into a `error` state.
+
+## `equal` Threshold
+
+If a value is `equal` the threshold, the threshold will be breached:
+
+```json
+{"name": "cpu", "value": 0.6, "threshold": {"equal": 0.95, "level": "warning"}},
+```
+
+If `value`, `0.6`, is `equal` to `0.95`, the monitor will transition into a `warning` state.
+
+## `nequal` Threshold
+
+If a value is **not equal** to the threshold, the threshold will be breached:
+
+```json
+{"name": "cpu", "value": 0.6, "threshold": {"nequal": 0.95, "level": "warning"}},
+```
+
+If `value`, `0.6`, is **not equal** to `0.95`, the monitor will transition into a `warning` state.
+
+## `outside` Threshold
+
+If a value is `outside` the threshold range, the threshold will be breached:
+
+```json
+{"name": "cpu", "value": 0.6, "threshold": {"outside": {"min": 0.20, "max": 0.95} "level": "critical"}},
+```
+
+If `value`, `0.6`, is `outside` the range of `0.20` and `0.95`, the monitor will transition into a `critical` state.
 
 ## Alerting Levels
 

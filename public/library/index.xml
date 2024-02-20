@@ -35,7 +35,7 @@
       <link>http://localhost:1313/help/library/agents-threshold-types/</link>
       <pubDate>Thu, 08 Feb 2024 09:26:58 -0800</pubDate>
       <guid>http://localhost:1313/help/library/agents-threshold-types/</guid>
-      <description>Agent Value Threshold Types A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.&#xA;Thresholds can be configured on the status value or status values property.&#xA;above Threshold If a value goes above this threshold, the threshold will be breached:&#xA;1 {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0.</description>
+      <description>Agent Value Threshold Types A threshold is an optional value that allows you to configure the error state of a monitor. If the respective sample value breaches the threshold configuration, the threshold will transition the monitor to the respective alerting level.&#xA;Thresholds are configured on the status value or values property.&#xA;above Threshold If a value goes above the threshold, the threshold will be breached:&#xA;1 {&amp;#34;name&amp;#34;: &amp;#34;cpu&amp;#34;, &amp;#34;value&amp;#34;: 0.6, &amp;#34;threshold&amp;#34;: {&amp;#34;above&amp;#34;: 0.</description>
     </item>
     <item>
       <title>Agent Reports Status Value</title>
