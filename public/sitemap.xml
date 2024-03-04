@@ -3,20 +3,27 @@
   
   <url>
     <loc>http://localhost:1313/help/</loc>
-    <lastmod>2024-02-08T09:28:27-08:00</lastmod>
+    <lastmod>2024-03-04T10:48:05-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/help/library/agents-template/</loc>
-    <lastmod>2024-02-08T09:28:27-08:00</lastmod>
+    <loc>http://localhost:1313/help/library/integrate-node-red/</loc>
+    <lastmod>2024-03-04T10:48:05-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/help/library/</loc>
+    <lastmod>2024-03-04T10:48:05-08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/help/library/agents-template/</loc>
     <lastmod>2024-02-08T09:28:27-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

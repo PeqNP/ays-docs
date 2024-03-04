@@ -36,6 +36,7 @@ Do you need help? [Click here]({{< relref "library/contact-ays-representative.md
 - [How do I ping a host]({{< relref "library/how-do-i-ping-a-host.md" >}})
 - [Invalid call parameters]({{< relref "library/invalid-call-parameters.md" >}})
 - [Agent sensors]({{< relref "library/what-is-an-agent.md" >}})
+  - [Integrate Node-RED]({{< relref "library/integrate-node-red.md" >}})
 
 ## App-specific Contextual Help
 

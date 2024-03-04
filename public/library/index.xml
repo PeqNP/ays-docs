@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Bithead LLC 2023</copyright>
-    <lastBuildDate>Thu, 08 Feb 2024 09:28:27 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2024 10:48:05 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/help/library/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrate Node Red</title>
+      <link>http://localhost:1313/help/library/integrate-node-red/</link>
+      <pubDate>Mon, 04 Mar 2024 10:48:05 -0800</pubDate>
+      <guid>http://localhost:1313/help/library/integrate-node-red/</guid>
+      <description>Integrate the @ys Agent With Node-RED The @ys agent can be integrated with Node-RED by installing the ays-agent subflow.&#xA;Please refer to the ays-agent GitHub repository README for installation and usage.</description>
+    </item>
     <item>
       <title>Adopt an Agent Template</title>
       <link>http://localhost:1313/help/library/agents-template/</link>
